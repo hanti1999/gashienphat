@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 46px;
+    --black-color: #000;
+    --white-color: #fff;
+    --text-color: #333;
+    --primary-color: #302972;
+    --search-bar-height: 50px;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', 'Antonio', sans-serif;
+}
+
+.btn {
+    background-color: var(--primary-color);
+}
