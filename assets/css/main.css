@@ -38,7 +38,7 @@
 
 .header__top-item-icon {
     font-size: 1.3rem;
-    margin-right: 4px;
+    margin-right: 8px;
 }
 
 .header__top-item-social {
@@ -250,22 +250,14 @@
 
 .header__with-search-contact-phone {
     color: var(--text-color);
-    margin-left: 10px;
     height: var(--search-bar-height);
     display: flex;
-    flex-direction: row;
-}
-
-.header__with-search-contact-phone h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: 'Antonio';
 }
 
 .header__with-search-contact-phone span {
     font-size: 1.4rem;
     line-height: var(--search-bar-height);
-    margin-left: 10px;
+    margin-left: 8px;
 }
 
 .header__banner {

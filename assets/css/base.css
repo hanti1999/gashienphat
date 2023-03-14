@@ -21,3 +21,13 @@ html {
 .btn {
     background-color: var(--primary-color);
 }
+
+.contact-phone {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-left: 8px;
+    font-family: 'Antonio';
+    display: block;
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./assets/script/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +23,9 @@
                 <div class="header__top">
                     <div class="header__top-list">
                         <div class="header__top-item">
-                            <i class="fa-solid fa-phone header__top-item-icon"></i>
-                            <span><b>02513 511 610 - 0986 573 072</b></span>
+                            <i class="fa-solid fa-phone header__top-item-icon" style="margin-right: 0;"></i>
+                            <a class="contact-phone" href="tel:02513511610">02513 511 610</a>
+                            <a class="contact-phone" href="tel:0986573072">0986 573 072</a>
                         </div>
                         <!-- <div class="separate"></div> -->
                         <div class="header__top-item hide-on-tablet-mobile">
@@ -33,16 +35,16 @@
                     </div>
                     <div class="header__top-list">
                         <div class="header__top-item hide-on-tablet-mobile">
-                            <a href="#" class="header__top-item-link">
+                            <a target="_blank" href="https://www.facebook.com/hienphatvina" class="header__top-item-link">
                                 <img class="header__top-item-social" src="./assets/img/facebookLogo.png" alt="">
                             </a>
-                            <a href="#" class="header__top-item-link">
+                            <a target="_blank" href="https://zalo.me/0986573072" class="header__top-item-link">
                                 <img class="header__top-item-social" src="./assets/img/zaloLogo.jpg" alt="">
                             </a>
                         </div>
                         <!-- <div class="separate"></div> -->
                         <div class="header__top-item">
-                            <a href="#" class="header-user">
+                            <a href="#" class="header-user" onclick="notAvailable()">
                                 <i class="fa-solid fa-user header__top-item-icon"></i>
                                 <span>Đăng nhập/Đăng ký</span>
                             </a>
@@ -76,16 +78,16 @@
                             </div>
         
                             <div class="header__navbar-cart">
-                                <a class="header__navbar-cart-link" href="#">
+                                <a class="header__navbar-cart-link" href="#" onclick="notAvailable()">
                                     <i class="fa-solid fa-heart header__navbar-cart-icon"></i>
-                                    <span class="header__navbar-cart-quantity">1</span>
+                                    <span class="header__navbar-cart-quantity">0</span>
                                 </a>
-                                <a class="header__navbar-cart-link" href="#">
+                                <a class="header__navbar-cart-link" href="#" onclick="notAvailable()">
                                     <i class="fa-solid fa-cart-shopping header__navbar-cart-icon"></i>
-                                    <span class="header__navbar-cart-quantity">1</span>
+                                    <span class="header__navbar-cart-quantity">0</span>
                                 </a>
                                 <span class="header__navbar-cart-label hide-on-tablet-mobile">Tổng đơn hàng:</span>
-                                <span class="header__navbar-cart-total hide-on-tablet-mobile">1.250.000đ</span>
+                                <span class="header__navbar-cart-total hide-on-tablet-mobile">0đ</span>
                             </div>
                         </div>
                     </div>
@@ -149,7 +151,10 @@
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div class="header__with-search-contact-phone">
-                                    <h3>02513 511 610 <br> 0986 573 072</h3>
+                                    <div>
+                                        <a class="contact-phone" href="tel:02513511610">02513 511 610</a>
+                                        <a class="contact-phone" href="tel:0986573072">0986 573 072</a>
+                                    </div>
                                     <span>Hỗ trợ 24/7</span>
                                 </div>
                             </div>
