@@ -31,3 +31,23 @@ html {
     font-family: 'Antonio';
     display: block;
 }
+
+@keyframes appear {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 430px;
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

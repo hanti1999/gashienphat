@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/img/gashienphatlogo.png" type="image/x-icon">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
     <script src="./assets/script/script.js"></script>
     <title>Gas Hiền Phát</title>
 </head>
@@ -63,16 +64,16 @@
                         <div class="header__navbar-right">
                             <div class="header__navbar-list">
                                 <div class="header__navbar-item header__navbar-item--active">
-                                    <a href="" class="header__navbar-item-link">Trang chủ</a>
+                                    <a href="index.html" class="header__navbar-item-link">Trang chủ</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="" class="header__navbar-item-link">Mua hàng</a>
+                                    <a href="product.html" class="header__navbar-item-link">Mua hàng</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="" class="header__navbar-item-link">Thông tin</a>
+                                    <a href="blog.html" class="header__navbar-item-link">Thông tin</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="" class="header__navbar-item-link">Liên hệ</a>
+                                    <a href="contact.html" class="header__navbar-item-link">Liên hệ</a>
                                 </div>
                             </div>
         
@@ -95,45 +96,49 @@
                 <div class="header__with-search row">
                     <div class="col l-3 m-12 c-12">
                         <div class="header__category">
-                            <div class="header__category-title">
+                            <label for="show-category-checkbox" class="header__category-title">
                                 <i class="fa-solid fa-list-ul"></i>
                                 <span>Tất cả ngành hàng</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" hidden id="show-category-checkbox">
+                            <div class="header__category-list-container" >
+                                <ul class="header__category-list">
+                                    <li class="header__category-item">
+                                        <a href="#">Bếp Gas Đôi</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Bếp Gas Đơn</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Bếp Gas Âm</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Bếp Gas Mini</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Bếp Điện Từ/Hồng Ngoại</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Bếp Gas Công Nghiệp/Khè</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Đồ Điện Gia Dụng</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Máy Lọc Nước</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Máy Làm Mát</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Máy Hút Khói</a>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Phụ Tùng/Phụ Kiện</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="header__category-list">
-                                <li class="header__category-item">
-                                    <a href="#">Bếp Gas Đôi</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Bếp Gas Đơn</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Bếp Gas Âm</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Bếp Gas Mini</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Bếp Điện Từ/Hồng Ngoại</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Bếp Gas Công Nghiệp/Khè</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Đồ Điện Gia Dụng</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Máy Lọc Nước</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Máy Làm Mát</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Máy Hút Khói</a>
-                                </li>
-                                <li class="header__category-item">
-                                    <a href="#">Phụ Tùng/Phụ Kiện</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
 
@@ -150,10 +155,7 @@
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div class="header__with-search-contact-phone">
-                                    <div>
-                                        <a class="contact-phone" href="tel:02513511610">02513 511 610</a>
-                                        <a class="contact-phone" href="tel:0986573072">0986 573 072</a>
-                                    </div>
+                                    <div class="contact-phone">02513 511 610<br>0986 573 072</div>
                                     <span>Hỗ trợ 24/7</span>
                                 </div>
                             </div>
