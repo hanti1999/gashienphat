@@ -3,11 +3,21 @@
     .hide-on-tablet-mobile {
         display: none;
     }
+
     .header__top-item:last-child {
         border: none;
     }
+
     .header__navbar-cart {
         width: unset;
+    }
+
+    .header__with-search-right {
+        margin-top: 10px;
+    }
+
+    .header__navbar {
+        height: var(--header-height);
     }
 }
 
@@ -22,5 +32,101 @@
 @media (max-width: 739px) {
     .hide-on-mobile {
         display: none;
+    }
+
+    .header__top {
+        justify-content: center;
+    }
+
+    .contact-phone {
+        font-size: 2.2rem;
+    }
+
+    .header__top-item-icon {
+        font-size: 1.6rem;
+    }
+
+    .header__top-item:last-child {
+        padding-left: 0;
+    }
+
+    .header__with-search-right, .header__banner {
+        margin: 4px 4px 0px;
+    }
+
+    .header__category {
+        border-radius: unset;
+    }
+
+    .header__category-list-container {
+        height: 0;
+        border: none;
+    }
+
+    #show-category-checkbox:checked ~ .header__category-list-container {
+        height: 430px;
+        transition: height linear .3s;
+        border: 1px solid #ccc;
+    }
+
+    .header__navbar-item {
+        margin-right: 0;
+    }
+
+    .header__navbar-list {
+        justify-content: space-between;
+        margin: 0 4px;
+    }
+
+    .header-mobile-user {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--header-height);
+        background-color: rgb(237, 237, 237);
+    }
+
+    .header-mobile-user-list {
+        display: flex;
+        height: 100%;
+    }
+
+    .header-mobile-user-item {
+        list-style: none;
+        height: 100%;
+        width: 33.3333%;
+        border-left: 1px solid #e0e0e0;
+    }
+
+    .header-mobile-user-item:first-child {
+        border-left: none;
+    }
+
+    .header-mobile-user-item-link {
+        text-decoration: none;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header-mobile-user-item-link i {
+        color: var(--text-color);
+        font-size: 2rem;
+    }
+
+    .header-mobile-user-item-link span {
+        font-size: 1.4rem;
+        color: var(--text-color);
+    }
+
+    .header-mobile-user {
+        display: block;
+    }
+
+    .header-mobile-user-item-link {
+        font-size: 1.5rem;
     }
 }

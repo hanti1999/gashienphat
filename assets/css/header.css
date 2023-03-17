@@ -1,7 +1,11 @@
 /* Header top */
-.header {
+.header__background {
     background-color: rgb(237, 237, 237);
     height: var(--header-height);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 .header__top {
@@ -9,6 +13,10 @@
     justify-content: space-between;
     height: var(--header-height);
     align-items: center;
+}
+
+.header-mobile-user {
+    display: none;
 }
 
 .header__top-list {
@@ -173,15 +181,16 @@
 }
 
 #show-category-checkbox:checked ~ .header__category-list-container {
-    display: none;
+    height: 0;
+    transition: height linear .3s;
+    border: none;
 }
 
 .header__category-list-container {
     border: 1px solid #ccc;
     height: 430px;
     transform-origin: top;
-    animation: appear linear .3s;
-    will-change: opacity, height;
+    transition: height linear .3s;
     overflow: hidden;
 }
 

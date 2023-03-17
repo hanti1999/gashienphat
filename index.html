@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,13 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/img/gashienphatlogo.png" type="image/x-icon">
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
     <script src="./assets/script/script.js"></script>
     <title>Gas Hiền Phát</title>
 </head>
 <body>
     <div class="app">
         <header class="header">
+            <div class="header__background"></div>
             <div class="grid wide">
                 <div class="header__top">
                     <div class="header__top-list">
@@ -43,13 +43,35 @@
                                 <img class="header__top-item-social" src="./assets/img/zaloLogo.jpg" alt="">
                             </a>
                         </div>
-                        <div class="header__top-item">
+                        <div class="header__top-item hide-on-mobile">
                             <a href="#" class="header-user" onclick="notAvailable()">
                                 <i class="fa-solid fa-user header__top-item-icon"></i>
                                 <span>Đăng nhập/Đăng ký</span>
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="header-mobile-user">
+                    <ul class="header-mobile-user-list">
+                        <li class="header-mobile-user-item">
+                            <a href="#" class="header-mobile-user-item-link">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </li>
+                        <li class="header-mobile-user-item">
+                            <a href="#" class="header-mobile-user-item-link">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>Yêu thích</span>
+                            </a>
+                        </li>
+                        <li class="header-mobile-user-item">
+                            <a href="#" class="header-mobile-user-item-link">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Giỏ hàng</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <nav class="header__navbar row">
                     <div class="col l-3 m-12 c-12">
@@ -67,17 +89,17 @@
                                     <a href="index.html" class="header__navbar-item-link">Trang chủ</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="product.html" class="header__navbar-item-link">Mua hàng</a>
+                                    <a href="./pages/product.html" class="header__navbar-item-link">Mua hàng</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="blog.html" class="header__navbar-item-link">Thông tin</a>
+                                    <a href="./pages/blog.html" class="header__navbar-item-link">Thông tin</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="contact.html" class="header__navbar-item-link">Liên hệ</a>
+                                    <a href="./pages/contact.html" class="header__navbar-item-link">Liên hệ</a>
                                 </div>
                             </div>
         
-                            <div class="header__navbar-cart">
+                            <div class="header__navbar-cart hide-on-mobile">
                                 <a class="header__navbar-cart-link" href="#" onclick="notAvailable()">
                                     <i class="fa-solid fa-heart header__navbar-cart-icon"></i>
                                     <span class="header__navbar-cart-quantity">0</span>
@@ -170,8 +192,8 @@
             </div>
         </header>
 
-        <div class="product">
-            <div class="grid wide"></div>
+        <!-- <div class="product">
+
         </div>
 
         <div class="blog">
@@ -180,7 +202,7 @@
 
         <footer class="footer">
 
-        </footer>
+        </footer> -->
     </div>
 </body>
 </html>

@@ -1,16 +1,3 @@
 function notAvailable() {
-    alert('Tính năng này đang phát triển! vui lòng quay lại sau, xin cảm ơn!');
+    alert('Tính năng này đang phát triển! Quý khách có nhu cầu mua hàng xin vui lòng liên hệ Zalo 0965 266 926');
 }
-
-// function toggleCategory() {
-//     if (document.querySelector('.header__category-list-container').style.display == 'block') {
-//         document.querySelector('.header__category-list-container').style.display = 'none';
-//     } else {
-//         document.querySelector('.header__category-list-container').style.display = 'block';
-//     }
-// }
-
-// $(document).ready(function() {
-//     var $title = $('.header__category-title');
-//     var $category = $('.header__category-list-container');
-// })
