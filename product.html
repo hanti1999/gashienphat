@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/product.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,18 @@
     <link rel="shortcut icon" href="./assets/img/gashienphatlogo.png" type="image/x-icon">
     <script src="./assets/script/script.js"></script>
     <title>Gas Hiền Phát</title>
+    <style>
+        .header__category-list-container {
+            height: 0;
+            border: none;
+        }
+
+        #show-category-checkbox:checked ~ .header__category-list-container {
+            height: 430px;
+            transition: height linear .3s;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
     <div class="app">
@@ -91,10 +103,10 @@
                     <div class="col l-9 m-12 c-12">
                         <div class="header__navbar-right">
                             <div class="header__navbar-list">
-                                <div class="header__navbar-item header__navbar-item--active">
+                                <div class="header__navbar-item">
                                     <a href="index.html" class="header__navbar-item-link">Trang chủ</a>
                                 </div>
-                                <div class="header__navbar-item">
+                                <div class="header__navbar-item header__navbar-item--active">
                                     <a href="product.html" class="header__navbar-item-link">Mua hàng</a>
                                 </div>
                                 <div class="header__navbar-item">
@@ -189,22 +201,123 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="header__banner">
-                            <a href="#">
-                                <div class="header__banner-img" style="background-image: url(./assets/img/894x420.png);"></div>
-                            </a>
-                            <div class="header__banner-label">
-                                <h2>Chào mừng quý khách đến với Website chính thức của</h2>
-                                <span>CTY TNHH HIỀN PHÁT VINA</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
         <div class="product">
-
+            <div class="sale-product">
+                <div class="grid wide">
+                    <div class="sale-label">
+                        <i class="fa-brands fa-gripfire"></i>
+                        KHUYẾN MÃI HOT
+                    </div>
+                    <div class="row">
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="sale-product-item-link">
+                                <div class="sale-product-item">
+                                    <div class="sale-product-item__head">
+                                        <div class="sale-product__img">
+                                            <img src="./assets/img/Akia.png" alt="">
+                                        </div>
+                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="sale-product__ribbon">Giảm 150.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                    </div>
+                                    <div class="sale-product__name">
+                                        <h1>Bếp gas đôi mặt kính Akia</h1>
+                                    </div>
+                                    <div class="sale-product__price">
+                                        <span class="sale-product__price-old">1.790.000đ</span>
+                                        <span class="sale-product__price-current">1.640.000đ</span>
+                                    </div>
+                                    <div class="sale-product__gift">
+                                        <span>Tặng chảo chống dính 26cm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="sale-product-item-link">
+                                <div class="sale-product-item">
+                                    <div class="sale-product-item__head">
+                                        <div class="sale-product__img">
+                                            <img src="./assets/img/fukudaQD001.png" alt="">
+                                        </div>
+                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="sale-product__ribbon">Giảm 100.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                    </div>
+                                    <div class="sale-product__name">
+                                        <h1>Bếp gas đôi mặt kính Ogawa/Fukuda</h1>
+                                    </div>
+                                    <div class="sale-product__price">
+                                        <span class="sale-product__price-old">890.000đ</span>
+                                        <span class="sale-product__price-current">790.000đ</span>
+                                    </div>
+                                    <div class="sale-product__gift">
+                                        <span>Tặng chảo chống dính 26cm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="sale-product-item-link">
+                                <div class="sale-product-item">
+                                    <div class="sale-product-item__head">
+                                        <div class="sale-product__img">
+                                            <img src="./assets/img/lora.png" alt="">
+                                        </div>
+                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="sale-product__ribbon">Giảm 100.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                    </div>
+                                    <div class="sale-product__name">
+                                        <h1>Bếp gas đôi mặt kính LoraSun/Nasonal</h1>
+                                    </div>
+                                    <div class="sale-product__price">
+                                        <span class="sale-product__price-old">580.000đ</span>
+                                        <span class="sale-product__price-current">480.000đ</span>
+                                    </div>
+                                    <div class="sale-product__gift">
+                                        <span>Tặng chảo chống dính 26cm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="sale-product-item-link">
+                                <div class="sale-product-item">
+                                    <div class="sale-product-item__head">
+                                        <div class="sale-product__img">
+                                            <img src="./assets/img/sanka903.png" alt="">
+                                        </div>
+                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="sale-product__ribbon">Giảm 200.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                    </div>
+                                    <div class="sale-product__name">
+                                        <h1>Bếp gas đôi mặt inox SankaTech</h1>
+                                    </div>
+                                    <div class="sale-product__price">
+                                        <span class="sale-product__price-old">1.950.000đ</span>
+                                        <span class="sale-product__price-current">1.750.000đ</span>
+                                    </div>
+                                    <div class="sale-product__gift">
+                                        <span>Tặng chảo chống dính 26cm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="blog">

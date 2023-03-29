@@ -36,13 +36,12 @@ html {
     display: block;
 }
 
-.modal {
+.modal, .mobile-modal {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /* display: flex; */
     display: none;
     align-items: center;
     justify-content: center;
@@ -86,6 +85,16 @@ html {
     position: absolute;
 }
 
-#modal-checkbox:checked ~ .modal {
+#modal-checkbox:checked ~ .modal, #modal-checkbox:checked ~ .mobile-modal {
     display: none;
+}
+
+.mobile-modal h2 {
+    font-size: 3rem;
+}
+
+.mobile-modal a {
+    display: block;
+    font-size: 4rem;
+    margin: 4px 0;
 }
