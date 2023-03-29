@@ -199,6 +199,7 @@
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     background-color: #fff;
+    z-index: 1;
 }
 
 .header__category-list {
@@ -293,6 +294,7 @@
     margin-top: 10px;
     border-radius: 2px;
     overflow: hidden;
+    position: relative;
 }
 
 .header__banner-img {
@@ -300,5 +302,23 @@
     background-size: cover;
     background-position: center;
     height: 420px;
-    border: 1px solid #ddd;
+    filter: blur(4px);
+}
+
+.header__banner-label {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    color: white;
+    text-shadow: 3px 3px 6px #000;
+}
+
+.header__banner-label span {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.header__banner-label h2 {
+    font-size: 3.2rem;
+    margin-top: 5px;
 }
