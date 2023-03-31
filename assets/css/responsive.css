@@ -4,6 +4,11 @@
         /* display: flex; */
         display: none;
     }
+
+    .header__category-item:hover > a {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
 }
 
 /* Tablet - mobile */
@@ -31,12 +36,17 @@
     .header__category-list-container {
         height: 0;
         border: none;
+        overflow: hidden;
     }
 
     #show-category-checkbox:checked ~ .header__category-list-container {
         height: 430px;
         transition: height linear .3s;
         border: 1px solid #ccc;
+    }
+
+    .header__category-child {
+        display: none;
     }
 }
 

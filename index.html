@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./assets/img/gashienphatlogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/icon/gashienphatlogo.png" type="image/x-icon">
     <script src="./assets/script/script.js"></script>
     <title>Gas Hiền Phát</title>
 </head>
@@ -39,10 +39,10 @@
                     <div class="header__top-list">
                         <div class="header__top-item hide-on-tablet-mobile">
                             <a target="_blank" href="https://www.facebook.com/hienphatvina" class="header__top-item-link">
-                                <img class="header__top-item-social" src="./assets/img/facebookLogo.png" alt="">
+                                <img class="header__top-item-social" src="./assets/img/icon/facebookLogo.png" alt="">
                             </a>
                             <a target="_blank" href="https://zalo.me/0965266926" class="header__top-item-link">
-                                <img class="header__top-item-social" src="./assets/img/zaloLogo.jpg" alt="">
+                                <img class="header__top-item-social" src="./assets/img/icon/zaloLogo.jpg" alt="">
                             </a>
                         </div>
                         <div class="header__top-item hide-on-mobile">
@@ -83,7 +83,7 @@
                     <div class="col l-3 m-12 c-12">
                         <div class="header__navbar-logo hide-on-tablet-mobile">
                             <a href="#" class="header__navbar-logo-link">
-                                <img class="header__navbar-logo-img" src="./assets/img/Gashienphatlogo.png" alt="">
+                                <img class="header__navbar-logo-img" src="./assets/img/icon/gashienphatlogo.png " alt="">
                             </a>
                         </div>
                     </div>
@@ -95,13 +95,13 @@
                                     <a href="index.html" class="header__navbar-item-link">Trang chủ</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="product.html" class="header__navbar-item-link">Mua hàng</a>
+                                    <a href="#" class="header__navbar-item-link" onclick="notAvailable()">Mua hàng</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="blog.html" class="header__navbar-item-link">Thông tin</a>
+                                    <a href="#" class="header__navbar-item-link" onclick="notAvailable()">Thông tin</a>
                                 </div>
                                 <div class="header__navbar-item">
-                                    <a href="contact.html" class="header__navbar-item-link">Liên hệ</a>
+                                    <a href="#" class="header__navbar-item-link" onclick="notAvailable()">Liên hệ</a>
                                 </div>
                             </div>
         
@@ -134,37 +134,333 @@
                             <div class="header__category-list-container" >
                                 <ul class="header__category-list">
                                     <li class="header__category-item">
-                                        <a href="#">Bếp Gas Đôi</a>
+                                        <a href="#">Bếp Gas</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <div class="header__category-child">
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bếp gas đôi</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bếp gas đơn</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bếp gas mini</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bếp gas công nghiệp</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bếp gas cao áp khè</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại theo hãng</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Rinnai</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">NaMilux</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Paloma</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">SunHouse</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Nasonal</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Sakura</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khác</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="header__category-item">
-                                        <a href="#">Bếp Gas Đơn</a>
+                                        <a href="#">Bếp Điện</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <div class="header__category-child">
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bếp điện từ</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bếp hồng ngoại</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại theo hãng</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Kaff</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Kangaroo</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Sunhouse</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Sakura</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khác</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="header__category-item">
-                                        <a href="#">Bếp Gas Âm</a>
-                                    </li>
-                                    <li class="header__category-item">
-                                        <a href="#">Bếp Gas Mini</a>
-                                    </li>
-                                    <li class="header__category-item">
-                                        <a href="#">Bếp Điện Từ/Hồng Ngoại</a>
-                                    </li>
-                                    <li class="header__category-item">
-                                        <a href="#">Bếp Gas Công Nghiệp/Khè</a>
-                                    </li>
-                                    <li class="header__category-item">
-                                        <a href="#">Đồ Điện Gia Dụng</a>
+                                        <a href="#">Điện Gia Dụng</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <div class="header__category-child">
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Nồi cơm điện</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Nồi áp suất</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Nồi cơm gas</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Bàn ủi</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Máy giặt</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Tủ lạnh</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Máy lạnh</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Nồi cơm điện</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Sharp</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Kim cương</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Comet</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khác</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Bàn ủi</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Panasonic</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Máy giặt</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Toshiba</a>
+                                                </li>
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Tủ lạnh</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Toshiba</a>
+                                                </li>
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Máy lạnh</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Sharp</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="header__category-item">
                                         <a href="#">Máy Lọc Nước</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <div class="header__category-child">
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Máy lọc nước RO</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Máy lọc nước nóng - nguội</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Máy lọc nước nóng - lạnh - nguội</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại theo hãng</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Daikio/DaikioSan</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Mutosi</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khác</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="header__category-item">
-                                        <a href="#">Máy Làm Mát</a>
+                                        <a href="#">Quạt làm mát</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <div class="header__category-child">
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Quạt làm mát</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Quạt làm mát đá khô</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Quạt đứng</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Quạt treo tường</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại theo hãng</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Mitsubishi</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Daikio/DaikioSan</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Senkio</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Senko</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khác</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="header__category-item">
-                                        <a href="#">Máy Hút Khói</a>
+                                        <a href="#">Máy Hút Mùi</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <div class="header__category-child">
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Mặt kính cong</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Âm kệ tủ</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Áp tường</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại theo hãng</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Daikio/DaikioSan</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Senkio</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khác</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="header__category-item">
                                         <a href="#">Phụ Tùng/Phụ Kiện</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <div class="header__category-child">
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Van - dây gas</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Phụ kiện bếp gas</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khò gas</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Súng mồi</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Pin Panasonic</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="header__category-child-list">
+                                                <li class="header__category-child-item child-item--head">
+                                                    <span>Phân loại theo hãng</span>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">NaMilux</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Nasonal</a>
+                                                </li>
+                                                <li class="header__category-child-item">
+                                                    <a href="#">Khác</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Gạo</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Dụng Cụ Làm Bếp</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </li>
+                                    <li class="header__category-item">
+                                        <a href="#">Khác</a>
+                                        <i class="fa-solid fa-angle-right"></i>
                                     </li>
                                 </ul>
                             </div>
@@ -190,9 +486,7 @@
                             </div>
                         </div>
                         <div class="header__banner">
-                            <a href="#">
-                                <div class="header__banner-img" style="background-image: url(./assets/img/banner-1.png);"></div>
-                            </a>
+                            <div class="header__banner-img" style="background-image: url(./assets/img/banner-1.png);"></div>
                             <div class="header__banner-label">
                                 <span>Chào mừng quý khách <br>Đến với website chính thức của</span>
                                 <h2>CTY TNHH HIỀN PHÁT VINA</h2>
@@ -206,112 +500,427 @@
         <div class="product">
             <div class="sale-product">
                 <div class="grid wide">
-                    <div class="sale-label">
-                        <i class="fa-brands fa-gripfire"></i>
+                    <div class="product-label">
+                        <i class="fa-solid fa-fire"></i>
                         KHUYẾN MÃI HOT
                     </div>
                     <div class="row">
                         <!-- Product -->
                         <div class="col l-3 m-4 c-6">
-                            <a href="#" class="sale-product-item-link">
-                                <div class="sale-product-item">
-                                    <div class="sale-product-item__head">
-                                        <div class="sale-product__img">
-                                            <img src="./assets/img/Akia.png" alt="">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/Akia.png" alt="">
                                         </div>
-                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
-                                        <div class="sale-product__ribbon">Giảm 150.000đ</div>
-                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 150.000đ</div>
+                                        <img src="./assets/img/5yearWarranty.png" class="product__warranty"></img>
                                     </div>
-                                    <div class="sale-product__name">
-                                        <h1>Bếp gas đôi mặt kính Akia</h1>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt kính Akia Slim</h1>
                                     </div>
-                                    <div class="sale-product__price">
-                                        <span class="sale-product__price-old">1.790.000đ</span>
-                                        <span class="sale-product__price-current">1.640.000đ</span>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.790.000đ</span>
+                                        <span class="product__price-current">1.640.000đ</span>
                                     </div>
-                                    <div class="sale-product__gift">
-                                        <span>Tặng chảo chống dính 26cm</span>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Đầu đốt đồng thau</li>
+                                            <li>Kiềng thép sơn tĩnh điện</li>
+                                            <li>Mâm hứng dầu rời kèm ron cao su cách nhiệt</li>
+                                            <li>Điếu inox 304 chống gỉ sét</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <!-- Product -->
                         <div class="col l-3 m-4 c-6">
-                            <a href="#" class="sale-product-item-link">
-                                <div class="sale-product-item">
-                                    <div class="sale-product-item__head">
-                                        <div class="sale-product__img">
-                                            <img src="./assets/img/fukudaQD001.png" alt="">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/fukudaQD001.png" alt="">
                                         </div>
-                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
-                                        <div class="sale-product__ribbon">Giảm 100.000đ</div>
-                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 100.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
                                     </div>
-                                    <div class="sale-product__name">
-                                        <h1>Bếp gas đôi mặt kính Ogawa/Fukuda</h1>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt kính Ogawa/Fukuda QD001</h1>
                                     </div>
-                                    <div class="sale-product__price">
-                                        <span class="sale-product__price-old">890.000đ</span>
-                                        <span class="sale-product__price-current">790.000đ</span>
+                                    <div class="product__price">
+                                        <span class="product__price-old">890.000đ</span>
+                                        <span class="product__price-current">790.000đ</span>
                                     </div>
-                                    <div class="sale-product__gift">
-                                        <span>Tặng chảo chống dính 26cm</span>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Đầu đốt đồng thau</li>
+                                            <li>Kiềng thép sơn tĩnh điện</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <!-- Product -->
                         <div class="col l-3 m-4 c-6">
-                            <a href="#" class="sale-product-item-link">
-                                <div class="sale-product-item">
-                                    <div class="sale-product-item__head">
-                                        <div class="sale-product__img">
-                                            <img src="./assets/img/lora.png" alt="">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/lora.png" alt="">
                                         </div>
-                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
-                                        <div class="sale-product__ribbon">Giảm 100.000đ</div>
-                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 100.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
                                     </div>
-                                    <div class="sale-product__name">
+                                    <div class="product__name">
                                         <h1>Bếp gas đôi mặt kính LoraSun/Nasonal</h1>
                                     </div>
-                                    <div class="sale-product__price">
-                                        <span class="sale-product__price-old">580.000đ</span>
-                                        <span class="sale-product__price-current">480.000đ</span>
+                                    <div class="product__price">
+                                        <span class="product__price-old">580.000đ</span>
+                                        <span class="product__price-current">480.000đ</span>
                                     </div>
-                                    <div class="sale-product__gift">
-                                        <span>Tặng chảo chống dính 26cm</span>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Đầu đốt đồng thau</li>
+                                            <li>Kiềng thép sơn tĩnh điện</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <!-- Product -->
                         <div class="col l-3 m-4 c-6">
-                            <a href="#" class="sale-product-item-link">
-                                <div class="sale-product-item">
-                                    <div class="sale-product-item__head">
-                                        <div class="sale-product__img">
-                                            <img src="./assets/img/sanka903.png" alt="">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/sanka903.png" alt="">
                                         </div>
-                                        <div class="sale-product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
-                                        <div class="sale-product__ribbon">Giảm 200.000đ</div>
-                                        <img src="./assets/img/2yearWarranty.png" class="sale-product__warranty"></img>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 200.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
                                     </div>
-                                    <div class="sale-product__name">
-                                        <h1>Bếp gas đôi mặt inox SankaTech</h1>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt inox SankaTech SKT-903</h1>
                                     </div>
-                                    <div class="sale-product__price">
-                                        <span class="sale-product__price-old">1.950.000đ</span>
-                                        <span class="sale-product__price-current">1.750.000đ</span>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.950.000đ</span>
+                                        <span class="product__price-current">1.750.000đ</span>
                                     </div>
-                                    <div class="sale-product__gift">
-                                        <span>Tặng chảo chống dính 26cm</span>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt inox chống gỉ sét</li>
+                                            <li>Đầu đốt đồng thau</li>
+                                            <li>Điếu inox 304 chống gỉ sét</li>
+                                            <li>Kiềng thép sơn tĩnh điện</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     
+                    </div>
+                </div>
+            </div>
+
+            <div class="sale-banner">
+                <div class="grid wide">
+                    <img class="sale-banner-img" src="./assets/img/banner/salebanner.jpg" alt="">
+                    <!-- <div class="row">
+                        <div class="col l-6 m-6 c-12">
+                            <a href="#">
+                                <img class="sale-banner-img" src="./assets/img/salebanner_mini1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col l-6 m-6 c-12">
+                            <a href="#">
+                                <img class="sale-banner-img" src="./assets/img/salebanner_mini2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="best-seller-product">
+                <div class="grid wide">
+                    <div class="product-label">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        SẢN PHẨM BÁN CHẠY
+                    </div>
+                    <div class="row">
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/fukuda690.png" alt="">
+                                        </div>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 51.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt kính Fukuda FK-690</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.250.000đ</span>
+                                        <span class="product__price-current">1.199.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Đầu đốt đồng thau</li>
+                                            <li>Điếu inox 304 chống gỉ sét</li>
+                                            <li>Kiềng gang siêu bền bỉ kèm chắn gió</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/van-Namilux.png" alt="">
+                                        </div>
+                                        <!-- <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div> -->
+                                        <div class="product__ribbon">Giảm 10.000đ</div>
+                                        <!-- <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img> -->
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Van điều áp Namilux NA-336S</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">180.000đ</span>
+                                        <span class="product__price-current">170.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Chính hãng NaMilux/li>
+                                            <li>Chức năng ngắt an toàn khi quá áp</li>
+                                            <li>Công suất: 2kg/giờ</li>
+                                            <li>Áp suất đàu vào: 70~900 kPa</li>
+                                            <li>Áp suất đàu ra: 3.5 ± 0.5 kPa</li>
+                                            <span>Giảm thêm 10.000đ khi mua kèm dây dẫn gas</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/lora.png" alt="">
+                                        </div>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 100.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt kính LoraSun/Nasonal</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">580.000đ</span>
+                                        <span class="product__price-current">480.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Đầu đốt đồng thau</li>
+                                            <li>Kiềng thép sơn tĩnh điện</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/Akia.png" alt="">
+                                        </div>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 150.000đ</div>
+                                        <img src="./assets/img/5yearWarranty.png" class="product__warranty"></img>
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt kính Akia Slim</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.790.000đ</span>
+                                        <span class="product__price-current">1.640.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Đầu đốt đồng thau</li>
+                                            <li>Kiềng thép sơn tĩnh điện</li>
+                                            <li>Mâm hứng dầu rời kèm ron cao su cách nhiệt</li>
+                                            <li>Điếu inox 304 chống gỉ sét</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/sanka903.png" alt="">
+                                        </div>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 200.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt inox SankaTech</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.950.000đ</span>
+                                        <span class="product__price-current">1.750.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Kiềng gang siêu bền bỉ kèm chắn gió</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/sanka903.png" alt="">
+                                        </div>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 200.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt inox SankaTech</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.950.000đ</span>
+                                        <span class="product__price-current">1.750.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Kiềng gang siêu bền bỉ kèm chắn gió</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/sanka903.png" alt="">
+                                        </div>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 200.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt inox SankaTech</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.950.000đ</span>
+                                        <span class="product__price-current">1.750.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Kiềng gang siêu bền bỉ kèm chắn gió</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Product -->
+                        <div class="col l-3 m-4 c-6">
+                            <a href="#" class="product-item-link">
+                                <div class="product-item">
+                                    <div class="product-item__head">
+                                        <div class="product__img">
+                                            <img src="./assets/img/product/sanka903.png" alt="">
+                                        </div>
+                                        <div class="product__ribbon" style="bottom: calc(0px + 40px); background-color: rgba(255, 210, 30, 0.9);">Trả góp 0%</div>
+                                        <div class="product__ribbon">Giảm 200.000đ</div>
+                                        <img src="./assets/img/2yearWarranty.png" class="product__warranty"></img>
+                                    </div>
+                                    <div class="product__name">
+                                        <h1>Bếp gas đôi mặt inox SankaTech</h1>
+                                    </div>
+                                    <div class="product__price">
+                                        <span class="product__price-old">1.950.000đ</span>
+                                        <span class="product__price-current">1.750.000đ</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul>
+                                            <li>Mặt kính cường lực</li>
+                                            <li>Kiềng gang siêu bền bỉ kèm chắn gió</li>
+                                            <li>Đánh lửa magneto (cơ)</li>
+                                            <li>Sản xuất tại Việt Nam</li>
+                                            <span>Tặng chảo chống dính 26cm</span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

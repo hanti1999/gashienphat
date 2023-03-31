@@ -2,13 +2,17 @@
     margin: 20px 0;
 }
 
-.sale-label {
+.product-label {
     color: red;
     font-size: 2.5rem;
     font-weight: 500;
 }
 
-.sale-product-item-link {
+.product-item {
+    padding: 0 8px;
+}
+
+.product-item-link {
     display: block;
     border-radius: 4px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 0;
@@ -17,46 +21,48 @@
     text-decoration: none;
     margin-top: 8px;
     position: relative;
-    height: 400px;
 }
 
-.sale-product-item-link:hover .sale-product__img > img {
+.product-item-link:hover .product__img > img {
     transform: scale(1.1);
 }
 
-.sale-product-item__head {
+.product-item__head {
     position: relative;
 }
 
-.sale-product__img img {
+.product__img img {
     width: 100%;
     transition: transform linear .2s;
 }
 
-.sale-product__name {
-    padding: 0 8px;
+.product__name {
+    overflow: hidden;
 }
 
-.sale-product__name h1 {
+.product__name h1 {
     font-size: 1.6rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+   	-webkit-line-clamp: 2;
 }
 
-.sale-product__price {
-    padding: 8px;
+.product__price {
+    padding: 8px 0;
 }
 
-.sale-product__price-old {
+.product__price-old {
     text-decoration: line-through;
     font-size: 1.4rem;
 }
 
-.sale-product__price-current {
+.product__price-current {
     color: red;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.sale-product__ribbon {
+.product__ribbon {
     background-color: red;
     display: inline-block;
     padding: 4px 8px;
@@ -65,23 +71,41 @@
     bottom: calc(0px + 10px);
     font-size: 1.3rem;
     border-radius: 4px;
-    margin-left: 8px;
 }
 
-.sale-product__warranty {
+.product__warranty {
     position: absolute;
     width: 90px;
-    top: calc(0px + 8px);
-    right: calc(0px + 8px);
+    top: 0;
+    right: 0;
 }
 
-.sale-product__gift {
-    color: var(--text-color);
-    padding: 16px 8px;
-    font-size: 1.3rem;
-    background-color: #f8f9fa;
-    border-radius: 4px;
-    position: absolute;
-    bottom: 0;
+.sale-banner {
+    margin-bottom: 20px;
+}
+
+.sale-banner-img {
+    border-radius: 2px;
     width: 100%;
+}
+
+.product-info {
+    background-color: #f8f9fa;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 8px;
+}
+
+.product-info ul {
+    list-style-type: circle;
+    font-size: 1.3rem;
+    margin-left: 16px;
+}
+
+.product-info li {
+    margin-bottom: 4px;
+}
+
+.product-info span {
+    font-size: 1.5rem;
 }
