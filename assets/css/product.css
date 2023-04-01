@@ -1,3 +1,17 @@
+.top-banner {
+    margin-top: 20px;
+}
+
+.top-banner img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+}
+
+.top-banner img:hover {
+    opacity: .8;
+}
+
 .sale-product {
     margin: 20px 0;
 }
