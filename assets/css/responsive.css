@@ -160,7 +160,7 @@
         height: 340px;
     }
 
-    .product {
+    .product, .blog {
         margin: 0 4px;
     }
 }

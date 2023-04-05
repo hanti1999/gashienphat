@@ -45,7 +45,6 @@
     border-radius: 50%;
 }
 
-.sale-product,
 .product-banner,
 .product__category,
 .product-container {
@@ -77,7 +76,7 @@
 
 .product-item-link {
     display: block;
-    border-radius: 4px;
+    border-radius: 2px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 0;
     overflow: hidden;
     color: var(--text-color);
