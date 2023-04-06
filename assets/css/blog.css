@@ -1,7 +1,7 @@
 .blog-container {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: var(--default-shadow);
     padding: 8px;
 }
 
@@ -19,17 +19,29 @@
 
 .blog-item {
     color: var(--text-color);
-    font-size: 1.4rem
+    font-size: 1.4rem;
 }
 
-.blog-item img {
+.blog-img {
+    overflow: hidden;
+    box-shadow: var(--default-shadow);
+    border-radius: 2px;
+}
+
+.blog-img img {
     display: block;
     width: 100%;
-    border-radius: 2px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: transform linear .2s;
 }
 
-.blog-item img, .blog-date, .blog-name, .blog-desc {
+.blog-item:hover img {
+    transform: scale(1.1);
+}
+
+.blog-item img, 
+.blog-date, 
+.blog-name, 
+.blog-desc {
     margin: 10px 0;
 }
 

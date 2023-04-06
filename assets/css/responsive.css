@@ -160,7 +160,7 @@
         height: 340px;
     }
 
-    .product, .blog {
+    .product, .blog, .footer-link, .footer-info {
         margin: 0 4px;
     }
 }

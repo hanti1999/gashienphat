@@ -11,6 +11,7 @@
     --text-color: #333;
     --primary-color: #302972;
     --search-bar-height: 50px;
+    --default-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 ul {
@@ -32,6 +33,16 @@ html {
 
 .btn {
     background-color: var(--primary-color);
+}
+
+.company-logo-link {
+    color: transparent;
+    display: block;
+    width: 60px;
+}
+
+.company-logo-img {
+    width: 100%;
 }
 
 .contact-phone {
