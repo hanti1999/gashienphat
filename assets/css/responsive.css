@@ -163,4 +163,8 @@
     .product, .blog, .footer-link, .footer-info {
         margin: 0 4px;
     }
+
+    .footer {
+        padding-bottom: 50px;
+    }
 }

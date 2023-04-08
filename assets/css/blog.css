@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 8px;
 }
 
 .blog-title h1 {
@@ -26,19 +27,13 @@
     overflow: hidden;
     box-shadow: var(--default-shadow);
     border-radius: 2px;
+    aspect-ratio: 16/9;
 }
 
-.blog-img img {
-    display: block;
+.blog-img img { 
     width: 100%;
-    transition: transform linear .2s;
 }
-
-.blog-item:hover img {
-    transform: scale(1.1);
-}
-
-.blog-item img, 
+ 
 .blog-date, 
 .blog-name, 
 .blog-desc {
@@ -64,4 +59,5 @@
     -webkit-box-orient: vertical;
    	-webkit-line-clamp: 4;
     overflow: hidden;
+    list-style-type: circle;
 }
