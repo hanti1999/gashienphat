@@ -101,7 +101,7 @@
     font-size: 1.6rem;
 }
 
-.header__navbar-cart {
+/* .header__navbar-cart {
     width: 250px;
     text-align: right;
 }
@@ -139,7 +139,12 @@
     font-weight: 700;
     left: 15px;
     bottom: 100%;
-}
+} */
+
+/* .header__navbar-banner img {
+    height: 55px;
+    display: block;
+} */
 
 /* Header with search */
 .header__category {
@@ -258,6 +263,7 @@
     align-items: center;
     box-shadow: var(--default-shadow);
     border-radius: 2px;
+    position: relative;
     flex: 1;
 }
 
@@ -267,6 +273,35 @@
     padding: 8px 16px;
     font-size: 1.4rem;
     flex: 1;
+}
+
+.header__with-search-input:focus ~ .header__search-history {
+    display: block;
+}
+
+.header__search-history {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    z-index: 1;
+    padding: 8px 0;
+    box-shadow: var(--default-shadow);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: none;
+}
+
+.header__search-history a {
+    padding: 6px 16px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block;
+}
+
+.header__search-history a:hover {
+    background-color: #f5f5f5;
 }
 
 .header__with-search-btn {
@@ -287,12 +322,42 @@
     display: block;
 }
 
-.header__with-search-contact {
+.header__with-search-cart {
     display: flex;
     align-items: center;
 }
 
-.header__with-search-contact-icon {
+.header__with-search-cart-btn {
+    width: 120px;
+    position: relative;
+    text-align: center;
+}
+
+.header__with-search-cart-btn a {
+    color: var(--text-color);
+}
+
+.header__with-search-cart-btn i {
+    font-size: 2.6rem;
+    cursor: pointer;
+}
+
+.header__with-search-cart-btn span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    right: 25%;
+    bottom: 80%;
+}
+
+/* .header__with-search-contact-icon {
     width: var(--search-bar-height);
     height: var(--search-bar-height);
     background-color: #f5f5f5;
@@ -316,7 +381,7 @@
     font-size: 1.4rem;
     line-height: var(--search-bar-height);
     margin-left: 8px;
-}
+} */
 
 .header__banner {
     margin-top: 10px;

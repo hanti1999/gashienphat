@@ -12,8 +12,8 @@
     margin-bottom: 8px;
 }
 
-.blog-title h1 {
-    font-size: 3rem;
+.blog-title h3 {
+    font-size: 2.4rem;
     color: red;
     font-weight: 500;
 }
