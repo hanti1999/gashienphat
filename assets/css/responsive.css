@@ -9,6 +9,10 @@
         font-size: 1.6rem;
         font-weight: 500;
     }
+
+    #backToTopBtn:hover {
+        background-color: #555;
+    }
 }
 
 /* Tablet - mobile */
@@ -166,5 +170,10 @@
 
     .footer {
         padding-bottom: 50px;
+    }
+
+    #backToTopBtn {
+        bottom: 50px;
+        right: 4px;
     }
 }
