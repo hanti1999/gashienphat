@@ -212,7 +212,8 @@
 }
 
 .header__category-item:hover .header__category-child {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 .header__category-child::before {
@@ -231,7 +232,10 @@
     top: 0;
     background-color: #fff;
     box-shadow: var(--default-shadow);
-    display: none;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity linear .1s, visibility linear .1s;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
 }
