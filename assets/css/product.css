@@ -83,10 +83,15 @@
     text-decoration: none;
     margin-top: 8px;
     position: relative;
+    transition: all linear .125s;
 }
 
 .product-item-link:hover .product__img > img {
     transform: scale(1.1);
+}
+
+.product-item-link:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .product-item__head {
@@ -136,6 +141,11 @@
     border-radius: 4px;
 }
 
+.product__ribbon.APR {
+    bottom: calc(0px + 40px); 
+    background-color: rgba(255, 210, 30, 0.9);
+}
+
 .product__warranty {
     position: absolute;
     width: 90px;
@@ -158,11 +168,11 @@
 
 .product-info ul {
     list-style-type: circle;
-    font-size: 1.3rem;
-    margin-left: 16px;
+    margin-left: 12px;
 }
 
 .product-info li {
+    font-size: 1.3rem;
     margin-bottom: 4px;
 }
 
