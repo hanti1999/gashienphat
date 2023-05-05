@@ -208,7 +208,7 @@ var products = [
         description: [
             'Mặt kính cường lực cao ấp',
             'Đầu đốt đồng thau kèm đầu hâm',
-            'Kiềng thép phủ men',
+            'Kiềng thép phủ men kèm mâm hứng dầu có thể tháo rời',
             'Đánh lửa magneto (cơ)',
             'Điếu gang bền bỉ',
             'Lượng gas tiêu thụ ~0.42kg/h',
@@ -230,7 +230,7 @@ var products = [
             'Mặt kính cường lực',
             'Đầu đốt đồng thau',
             'Điếu inox 304 chống gỉ sét',
-            'Kiềng gang siêu bền bỉ kèm chắn gió<',
+            'Kiềng gang siêu bền bỉ kèm chắn gió',
             'Đánh lửa magneto (cơ)',
             'Sản xuất tại Việt Nam'
         ]

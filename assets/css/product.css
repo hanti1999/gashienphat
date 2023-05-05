@@ -86,10 +86,6 @@
     transition: all linear .125s;
 }
 
-.product-item-link:hover .product__img > img {
-    transform: scale(1.1);
-}
-
 .product-item-link:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

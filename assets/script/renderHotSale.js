@@ -26,7 +26,7 @@ var products = [
         img: './assets/img/product/Kangaroo-KG435i.png',
         name: 'Bếp điện từ đôi Kangaroo KG435i', 
         warranty: './assets/img/2yearWarranty.png',
-        apr: '',
+        apr: 'Trả góp 0%',
         sale: '2.200.000đ',
         oldPrice: '8.000.000đ',
         newPrice: '5.800.000đ',
@@ -35,7 +35,7 @@ var products = [
             'Mặt kính cường lực Ceramic chống bám nước, chống xước, chịu sốc nhiệt',
             'Công nghệ dẫn nhiệt theo chiều dọc, tiết kiệm điện năng',
             'Điều khiển cảm ứng trượt trên mặt bếp',
-            'Cảng báo khi không có nồi/sai loại nồi, khóa trẻ em, cảm ứng quá nhiệt',
+            'Cảnh báo khi không có nồi/sai loại nồi, khóa trẻ em, cảm ứng quá nhiệt',
             'Đa chức năng, hẹn giờ độc lập',
             'Thương hiệu Việt Nam'
         ]
@@ -46,7 +46,7 @@ var products = [
         img: './assets/img/product/daikiosan-dsw-32009h2.png',
         name: 'Máy lọc nước RO 9 lõi Daikiosan DSW 32009H2', 
         warranty: './assets/img/2yearWarranty.png',
-        apr: '',
+        apr: 'Trả góp 0%',
         sale: '1.350.000đ',
         oldPrice: '6.650.000đ',
         newPrice: '5.300.000đ',
