@@ -49,7 +49,7 @@ var products = [
         newPrice: '370.000đ',
         gift: 'Tặng chảo chống dính Sunhouse 18cm',
         description: [
-            'vỏ inox chống gỉ sét',
+            'Vỏ inox chống gỉ sét',
             'Đầu đốt hợp kim nhôm Namilux',
             'Kiềng thép phủ men có thể tháo rời',
             'Đánh lửa magneto (cơ)',

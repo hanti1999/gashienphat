@@ -69,7 +69,7 @@ var products = [
         sale: '600.000đ',
         oldPrice: '8.290.000đ',
         newPrice: '7.690.000đ',
-        gift: 'Lưu ý: Chỉ dùng bình nước đầu đứng',
+        gift: '',
         description: [
             '8 cấp lọc tích hợp lõi ORP Hydrogen làm kiềm nước',
             '1 vòi 2 chức năng Nóng - Nguội tiện lợi',

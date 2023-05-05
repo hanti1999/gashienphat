@@ -151,7 +151,8 @@ var products = [
             'Kiềng thép phủ men kèm mâm hứng dầu rời chống gỉ',
             'Đánh lửa IC dùng Pin',
             'Cảm ứng tự động ngắt gas tự động khi gặp sự cố',
-            'Sản xuất tại Việt Nam'
+            'Sản xuất tại Việt Nam',
+            'Kích thước cắt đá: 700x400 mm'
         ]
     },
     {
