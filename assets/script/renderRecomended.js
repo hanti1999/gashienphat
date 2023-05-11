@@ -176,7 +176,7 @@ var products = [
         img: './assets/img/product/kaff-kf-tl70H.png',
         name: 'Máy hút mùi âm kệ tủ Kaff KF TL70H', 
         warranty: './assets/img/2yearWarranty.png',
-        apr: '',
+        apr: 'Trả góp 0%',
         sale: '590.000đ',
         oldPrice: '5.580.000đ',
         newPrice: '4.990.000đ',

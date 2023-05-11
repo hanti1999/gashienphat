@@ -5,7 +5,7 @@ var products = [
         img: './assets/img/product/ladomax-ha668.png',
         name: 'Bếp điện từ đơn Ladomax HA668', 
         warranty: './assets/img/1yearWarranty.png',
-        apr: 'Trả góp 0%',
+        apr: '',
         sale: '40.000đ',
         oldPrice: '890.000đ',
         newPrice: '850.000đ',
