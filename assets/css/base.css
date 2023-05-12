@@ -62,8 +62,8 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     align-items: center;
     justify-content: center;
     z-index: 10;
