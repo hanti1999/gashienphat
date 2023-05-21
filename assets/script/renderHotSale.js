@@ -50,7 +50,7 @@ var products = [
         sale: '1.350.000đ',
         oldPrice: '6.650.000đ',
         newPrice: '5.300.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: '',
         description: [
             '9 cấp lọc',
             'Linh kiệt nhập khẩu Mỹ, Đài Loan, ...',

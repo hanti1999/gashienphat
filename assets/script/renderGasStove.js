@@ -9,7 +9,7 @@ var products = [
         sale: '51.000đ',
         oldPrice: '1.250.000đ',
         newPrice: '1.199.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
             'Đầu đốt đồng thau',
@@ -29,7 +29,7 @@ var products = [
         sale: '20.000đ',
         oldPrice: '360.000đ',
         newPrice: '340.000đ',
-        gift: 'Tặng chảo chống dính Sunhouse 18cm',
+        gift: 'Tặng chảo chống dính Sunhouse 18cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
             'Đầu đốt đồng thau',
@@ -48,7 +48,7 @@ var products = [
         sale: '60.000đ',
         oldPrice: '580.000đ',
         newPrice: '520.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
             'Đầu đốt đồng thau',
@@ -67,7 +67,7 @@ var products = [
         sale: '150.000đ',
         oldPrice: '1.790.000đ',
         newPrice: '1.640.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
             'Đầu đốt đồng thau',
@@ -107,7 +107,7 @@ var products = [
         sale: '100.000đ',
         oldPrice: '890.000đ',
         newPrice: '790.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
             'Đầu đốt đồng thau',
@@ -144,7 +144,7 @@ var products = [
         sale: '200.000đ',
         oldPrice: '5.300.000đ',
         newPrice: '5.100.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực cao ấp',
             'Đầu đốt bằng thép không gỉ công nghệ Inner Burner lửa xoắn',
@@ -165,7 +165,7 @@ var products = [
         sale: '300.000đ',
         oldPrice: '2.490.000đ',
         newPrice: '2.190.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực chịu nhiệt',
             'Đánh lửa magneto (cơ)',
@@ -205,7 +205,7 @@ var products = [
         sale: '0đ',
         oldPrice: '',
         newPrice: '2.590.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực cao ấp',
             'Đầu đốt đồng thau kèm đầu hâm',
@@ -226,7 +226,7 @@ var products = [
         sale: '51.000đ',
         oldPrice: '1.250.000đ',
         newPrice: '1.199.000đ',
-        gift: 'Tặng chảo chống dính Elmich 26cm',
+        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
             'Đầu đốt đồng thau',

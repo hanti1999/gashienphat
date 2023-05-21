@@ -47,7 +47,7 @@ var products = [
         sale: '10.000đ',
         oldPrice: '380.000đ',
         newPrice: '370.000đ',
-        gift: 'Tặng chảo chống dính Sunhouse 18cm',
+        gift: 'Tặng chảo chống dính Sunhouse 18cm khi mua kèm van gas',
         description: [
             'Vỏ inox chống gỉ sét',
             'Đầu đốt hợp kim nhôm Namilux',
