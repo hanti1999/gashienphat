@@ -11,25 +11,23 @@ const Navbar = () => {
       <Link href={'/'} className='flex items-center'>
         <Image
           src={'/logo.png'}
-          alt='OWE'
+          alt='Hien Phat logo'
           width={36}
           height={36}
           className='w-6 h-6 md:w-9 md:h-9'
         />
-        <p className='hidden md:block text-md font-medium tracking-wider'>
-          OWE
-        </p>
+        <p className='hidden md:block font-bold tracking-wider'>Hiền Phát</p>
       </Link>
       {/* Right */}
-      <div className='flex items-center gap-6'>
-        <SearchBar />
+      <SearchBar />
+      {/* <div className='flex items-center gap-6'>
         <Link href={'/'}>
           <Home className='w-4 h-4 text-gray-600' />
         </Link>
         <Bell className='w-4 h-4 text-gray-600' />
         <ShoppingCart className='w-4 h-4 text-gray-600' />
-        <Link href={'/login'}>Dăng nhập</Link>
-      </div>
+        <Link href={'/login'}>Đăng nhập</Link>
+      </div> */}
     </nav>
   );
 };
