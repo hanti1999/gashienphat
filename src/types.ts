@@ -1,5 +1,6 @@
 export type ProductType = {
   id: string | number;
+  model: Record<string, string>;
   name: string;
   price: number;
   coverImage: Record<string, string>;

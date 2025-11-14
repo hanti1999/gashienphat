@@ -38,8 +38,8 @@ const ProductCard = ({ product }: { product: ProductType }) => {
 
       <div className='flex flex-col gap-4 p-4'>
         <h1 className='font-medium'>{product?.name}</h1>
-        <div className='fle items-center gap-4 text-xs'>
-          <div className='flex flex-col gap-1'>
+        <div className='flex items-center gap-4 text-xs'>
+          <div>
             <span className='text-gray-500'>Màu</span>
             <div className='flex items-center gap-2'>
               {product?.colors.map((color) => (
@@ -55,7 +55,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
                   }
                 >
                   <div
-                    className='w-3.5 h-3.5 rounded-full'
+                    className='size-3.5 rounded-full'
                     style={{ backgroundColor: color }}
                   />
                 </div>

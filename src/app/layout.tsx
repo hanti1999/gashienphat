@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Gas Hiền Phát',
   description:
-    'CTY TNHH HIỀN PHÁT - Chuyên cung cấp gas, bếp gas, bếp điện chính hãng',
+    'GAS HIỀN PHÁT - Chuyên cung cấp gas, bếp gas, bếp điện chính hãng',
 };
 
 export default function RootLayout({

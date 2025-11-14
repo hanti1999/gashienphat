@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import SearchBar from './SearchBar';
-import { Bell, Home, ShoppingCart } from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -14,7 +13,7 @@ const Navbar = () => {
           alt='Hien Phat logo'
           width={36}
           height={36}
-          className='w-6 h-6 md:w-9 md:h-9'
+          className='size-6 md:size-9'
         />
         <p className='hidden md:block font-bold tracking-wider'>Hiền Phát</p>
       </Link>

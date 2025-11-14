@@ -9,6 +9,10 @@ const products: ProductsType = [
   {
     id: 1,
     name: 'Bếp gas đôi Rinnai RV-370',
+    model: {
+      white: 'RV-370(SM)N',
+      black: 'RV-370(GM)N',
+    },
     price: 1790000,
     discount: 20,
     finalPrice: 1432000,
@@ -23,6 +27,7 @@ const products: ProductsType = [
   {
     id: 2,
     name: 'Bếp gas đôi Akia A-72SLim',
+    model: { black: 'A-72SLim' },
     price: 1790000,
     discount: 20,
     finalPrice: 1432000,
@@ -34,6 +39,7 @@ const products: ProductsType = [
   {
     id: 3,
     name: 'Bếp gas đôi Sanka SKT-109',
+    model: { black: 'SKT-109' },
     price: 1790000,
     discount: 20,
     finalPrice: 1432000,
