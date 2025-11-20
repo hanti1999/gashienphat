@@ -66,10 +66,13 @@ const ProductCard = ({ product }: { product: ProductType }) => {
 
         <div className='flex flex-col gap-1'>
           <p className='line-through text-sx'>
-            {product.price.toLocaleString()} đ
+            {Number(product.price.toLocaleString()).toLocaleString('vi-VN')} đ
           </p>
           <p className='text-lg font-bold'>
-            {product.finalPrice.toLocaleString()} đ
+            {Number(product.finalPrice.toLocaleString()).toLocaleString(
+              'vi-VN'
+            )}{' '}
+            đ
           </p>
         </div>
       </div>

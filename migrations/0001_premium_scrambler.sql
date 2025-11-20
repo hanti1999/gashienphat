@@ -1,0 +1,3 @@
+ALTER TABLE "product_details" ADD COLUMN "product_id" uuid NOT NULL;--> statement-breakpoint
+ALTER TABLE "product_details" ADD CONSTRAINT "product_details_product_id_products_id_fk" FOREIGN KEY ("product_id") REFERENCES "public"."products"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
+CREATE UNIQUE INDEX "product_details_product_id_unique" ON "product_details" USING btree ("product_id");
