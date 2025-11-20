@@ -3,10 +3,6 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-import 'swiper/css';
 
 const CarouselSwiper = ({
   carousel,

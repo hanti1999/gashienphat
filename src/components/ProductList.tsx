@@ -1,11 +1,10 @@
-import { ProductsType } from '@/types';
-import React from 'react';
-import Categories from './Categories';
-import ProductCard from './ProductCard';
 import Link from 'next/link';
-import Filter from './Filter';
-import { db } from '../../database/drizzle';
+import React from 'react';
 import { products } from '../../database/schema';
+import { db } from '../../database/drizzle';
+import ProductCard from './ProductCard';
+import Categories from './Categories';
+import Filter from './Filter';
 
 const ProductList = async ({
   category,
@@ -14,7 +13,7 @@ const ProductList = async ({
   category: string;
   params: 'homepage' | 'products';
 }) => {
-  const result = await db.select().from(products);
+  const result = await db.select().from(products).limit(9);
 
   // console.log(JSON.stringify(result, null, 2));
 

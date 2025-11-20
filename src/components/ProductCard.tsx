@@ -1,9 +1,9 @@
 'use client';
 
-import { ProductType } from '@/types';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { ProductType } from '@/types';
 
 const ProductCard = ({ product }: { product: ProductType }) => {
   const [productTypes, setProductTypes] = useState({
@@ -65,14 +65,16 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         </div>
 
         <div className='flex flex-col gap-1'>
-          <p className='line-through text-sx'>
-            {Number(product.price.toLocaleString()).toLocaleString('vi-VN')} đ
-          </p>
+          <div className='flex items-center gap-4'>
+            <p className='line-through text-sm'>
+              {Number(product.price).toLocaleString()} đ
+            </p>
+            <div className='px-1 py-0.5 bg-red-500 rounded-lg'>
+              <p className='text-xs text-white'>-{Number(product.discount)}%</p>
+            </div>
+          </div>
           <p className='text-lg font-bold'>
-            {Number(product.finalPrice.toLocaleString()).toLocaleString(
-              'vi-VN'
-            )}{' '}
-            đ
+            {Number(product.finalPrice).toLocaleString('vi-VN')} đ
           </p>
         </div>
       </div>

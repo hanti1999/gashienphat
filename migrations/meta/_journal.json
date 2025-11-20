@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1763629900925,
-      "tag": "0000_third_night_nurse",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1763633945067,
-      "tag": "0001_premium_scrambler",
+      "when": 1763649749691,
+      "tag": "0000_optimal_multiple_man",
       "breakpoints": true
     }
   ]

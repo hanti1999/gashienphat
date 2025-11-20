@@ -1,9 +1,9 @@
 'use client';
 
-import { ProductType } from '@/types';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { ProductType } from '@/types';
 
 const ProductInteraction = ({
   product,
@@ -44,7 +44,7 @@ const ProductInteraction = ({
         <p className='text-gray-500 mb-2'>Tư vấn ngay:</p>
         <Link
           href={'https://zalo.me/0982577949'}
-          className='ring-1 ring-gray-500 p-1 cursor-pointer rounded-lg inline-block'
+          className='cursor-pointer  inline-block'
           target='_blank'
         >
           <div className='relative aspect-square size-16'>

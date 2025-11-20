@@ -17,9 +17,13 @@ export const products = pgTable('products', {
   coverImage: jsonb('cover_image').$type<Record<string, string>>().notNull(),
   discount: numeric('discount', { precision: 5, scale: 2 }),
   finalPrice: numeric('final_price', { precision: 12, scale: 2 }).notNull(),
-  brandId: varchar('brand_id', { length: 100 }).notNull(),
-  categoryId: varchar('category_id', { length: 100 }).notNull(),
   colors: text('colors').array().notNull(),
+  brandId: uuid('brand_id')
+    .notNull()
+    .references(() => brands.id, { onDelete: 'restrict' }),
+  categoryId: uuid('category_id')
+    .notNull()
+    .references(() => categories.id, { onDelete: 'restrict' }),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });
 
@@ -41,3 +45,17 @@ export const productDetails = pgTable(
     ),
   })
 );
+
+export const brands = pgTable('brands', {
+  id: uuid('id').notNull().primaryKey().defaultRandom().unique(),
+  name: varchar('name', { length: 255 }).notNull(),
+  image: text('image').notNull(),
+  description: text('description'),
+});
+
+export const categories = pgTable('categories', {
+  id: uuid('id').notNull().primaryKey().defaultRandom().unique(),
+  name: varchar('name', { length: 255 }).notNull(),
+  image: text('image').notNull(),
+  description: text('description'),
+});
