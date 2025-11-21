@@ -4,6 +4,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProductType } from '@/types';
+import { ExternalLink, Phone } from 'lucide-react';
 
 const ProductInteraction = ({
   product,
@@ -29,27 +30,34 @@ const ProductInteraction = ({
         <div className='flex items-center gap-2'>
           {product.colors.map((color) => (
             <div
-              className={`cursor-pointer border-1 p-[2px] ${
+              className={`cursor-pointer border-1 p-0.5 rounded-full ${
                 selectedColor === color ? 'border-gray-300' : 'border-white'
               }`}
               key={color}
               onClick={() => handleTypeChange('color', color)}
             >
-              <div className={`w-6 h-6`} style={{ backgroundColor: color }} />
+              <div
+                className={`size-6 rounded-full`}
+                style={{ backgroundColor: color }}
+              />
             </div>
           ))}
         </div>
       </div>
-      <div>
-        <p className='text-gray-500 mb-2'>Tư vấn ngay:</p>
+      <div className='flex flex-row items-center gap-2'>
         <Link
           href={'https://zalo.me/0982577949'}
-          className='cursor-pointer  inline-block'
+          className='cursor-pointer hover:opacity-80 transition-opacity flex flex-1 justify-center items-center gap-1 bg-[#fb77c5] rounded-4xl px-4 py-3'
           target='_blank'
         >
-          <div className='relative aspect-square size-16'>
-            <Image src={'/icons/zaloLogo.png'} alt='zalo-logo' fill />
-          </div>
+          <p className='text-white'>Tư vấn ngay</p>
+          <ExternalLink size={16} color='white' />
+        </Link>
+        <Link
+          className='ring ring-gray-500 size-12 flex justify-center hover:opacity-80 transition-opacity items-center rounded-full'
+          href={'tel:0982577949'}
+        >
+          <Phone size={16} />
         </Link>
       </div>
     </div>

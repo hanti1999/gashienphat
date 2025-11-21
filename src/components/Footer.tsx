@@ -5,9 +5,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className='mt-16'>
-      <div className='grid grid-cols-1 md:grid-cols-5 bg-gray-200 p-8 rounded-lg'>
-        <div className='col-span-1 md:col-span-2 flex flex-col gap-4 items-center md:items-start '>
-          <Link href={'/'} className='flex items-center'>
+      <div className='grid grid-cols-1 md:grid-cols-5 bg-gray-700 text-white p-8 rounded-lg'>
+        <div className='col-span-1 md:col-span-2 flex flex-col gap-2 items-center md:items-start '>
+          {/* <Link href={'/'} className='flex items-center'>
             <Image
               src={'/logo.png'}
               alt='Hien Phat logo'
@@ -15,10 +15,10 @@ const Footer = () => {
               height={36}
               className='size-6 md:size-9'
             />
-          </Link>
-          <span className='block'>
-            Địa chỉ: 199, Quốc Lộ 51, ấp 7, xã An Phước, huyện Long Thành, tỉnh
-            Đồng Nai{' '}
+          </Link> */}
+          <h1 className='font-bold'>CÔNG TY TNHH HIỀN PHÁT VI NA</h1>
+          <div>
+            Địa chỉ: 199, Quốc Lộ 51, ấp 7, xã An Phước, tỉnh Đồng Nai{' '}
             <Link
               className='cursor-pointer underline text-blue-500'
               href='https://goo.gl/maps/yYy447eNamPJ1FYE9'
@@ -26,40 +26,42 @@ const Footer = () => {
             >
               (xem trên Google Map)
             </Link>
-          </span>
-          <span className='block'>
+          </div>
+          <div>
             Điện thoại:{' '}
-            <a className='text-primary' href='tel:02513511610'>
+            <Link href='tel:02513511610'>
               <b>02513 511 610</b>
-            </a>
-          </span>
-          <span className='block'>
+            </Link>
+          </div>
+          <div>
             Di động:{' '}
-            <a className='text-primary' href='tel:0986573072'>
+            <Link href='tel:0986573072'>
               <b>0986 573 072</b>
-            </a>
-          </span>
-          <span className='block'>
+            </Link>
+          </div>
+          <div>
+            Zalo:{' '}
+            <Link href='https://zalo.me/0982577949' target='_blank'>
+              <b>0982 577 948 (Hoàng Anh)</b>
+            </Link>
+          </div>
+          <div>
             Email:{' '}
-            <a
-              className='text-primary'
-              target='_blank'
-              href='mailto:gashienphat1979@gmail.com'
-            >
+            <Link target='_blank' href='mailto:gashienphat1979@gmail.com'>
               gashienphat1979@gmail.com
-            </a>
-          </span>
+            </Link>
+          </div>
         </div>
 
         <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
-          <p className='text-sm '>Links</p>
+          <p className='text-sm'>Links</p>
           <Link href={'/'}>Trang chủ</Link>
           <Link href={'/'}>Liên hệ</Link>
           <Link href={'/'}>Chính sách</Link>
         </div>
 
         <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
-          <p className='text-sm '>Links</p>
+          <p className='text-sm'>Links</p>
           <Link href={'/'}>Tất cả sản phẩm</Link>
           <Link href={'/'}>Sản phẩm mới</Link>
           <Link href={'/'}>Sản phẩm bán chạy</Link>
@@ -67,8 +69,19 @@ const Footer = () => {
         </div>
 
         <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
-          <p className='text-sm '>Links</p>
-          <Link href={'/'}>Giới thiệu</Link>
+          <p className='text-sm'>Theo dõi chúng tôi:</p>
+          <Link
+            href={'https://www.facebook.com/hienphatvina'}
+            target='_blank'
+            className='cursor-pointer'
+          >
+            <Image
+              src={'/icons/FacebookLogo.png'}
+              alt='Facebook logo'
+              width={36}
+              height={36}
+            />
+          </Link>
         </div>
       </div>
       <div className='flex flex-col items-center p-2 text-gray-500'>
