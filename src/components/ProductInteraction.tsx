@@ -1,10 +1,9 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import Image from 'next/image';
+import { ExternalLink, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { ProductType } from '@/types';
-import { ExternalLink, Phone } from 'lucide-react';
 
 const ProductInteraction = ({
   product,

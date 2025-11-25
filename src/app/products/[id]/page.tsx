@@ -1,16 +1,18 @@
 import ProductInteraction from '@/components/ProductInteraction';
 import CarouselSwiper from '@/components/CarouselSwiper';
 import ModalClient from '@/components/ModalClient';
+import Goback from '@/components/Goback';
 import { db } from '../../../../database/drizzle';
+import ratelimit from '../../../../lib/ratelimit';
 import {
   productDetails,
   products,
   brands,
   categories,
 } from '../../../../database/schema';
+import { redirect } from 'next/navigation';
+import { headers } from 'next/headers';
 import { eq } from 'drizzle-orm';
-import { ArrowLeft } from 'lucide-react';
-import Goback from '@/components/Goback';
 
 export const generateMetadata = async ({
   params,
@@ -49,6 +51,11 @@ const ProductPage = async ({
   // console.log(JSON.stringify(result, null, 2));
 
   const selectedColor = color || (result[0].products.colors[0] as string);
+
+  const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
+  const { success } = await ratelimit.limit(ip);
+
+  if (!success) return redirect('/too-fast');
 
   return (
     <div>

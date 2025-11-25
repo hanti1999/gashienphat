@@ -1,8 +1,8 @@
 'use client';
 
+import { Play } from 'lucide-react';
 import { useState } from 'react';
 import { Modal } from './Modal';
-import { Play } from 'lucide-react';
 
 export default function ModalClient({
   children,
