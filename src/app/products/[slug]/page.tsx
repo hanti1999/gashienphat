@@ -17,13 +17,13 @@ import { eq } from 'drizzle-orm';
 export const generateMetadata = async ({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) => {
   const result = await db
     .select()
     .from(products)
     .leftJoin(productDetails, eq(products.id, productDetails.productId))
-    .where(eq(products.id, (await params).id));
+    .where(eq(products.slug, (await params).slug));
 
   return {
     title: result[0].products.name,
@@ -35,7 +35,7 @@ const ProductPage = async ({
   params,
   searchParams,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
   searchParams: Promise<{ color: string }>;
 }) => {
   const color = (await searchParams).color;
@@ -46,7 +46,7 @@ const ProductPage = async ({
     .leftJoin(productDetails, eq(products.id, productDetails.productId))
     .leftJoin(brands, eq(products.brandId, brands.id))
     .leftJoin(categories, eq(products.categoryId, categories.id))
-    .where(eq(products.id, (await params).id));
+    .where(eq(products.slug, (await params).slug));
 
   // console.log(JSON.stringify(result, null, 2));
 

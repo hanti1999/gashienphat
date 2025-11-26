@@ -10,22 +10,22 @@ const ProductCard = ({ product }: { product: ProductType }) => {
     color: product.colors[0],
   });
 
-  const handleProductType = ({
-    type,
-    value,
-  }: {
-    type: 'color';
-    value: string;
-  }) => {
-    setProductTypes((prev) => ({
-      ...prev,
-      [type]: value,
-    }));
-  };
+  // const handleProductType = ({
+  //   type,
+  //   value,
+  // }: {
+  //   type: 'color';
+  //   value: string;
+  // }) => {
+  //   setProductTypes((prev) => ({
+  //     ...prev,
+  //     [type]: value,
+  //   }));
+  // };
 
   return (
     <div className='shadow-lg rounded-lg overflow-hidden'>
-      <Link href={`/products/${product?.id}`}>
+      <Link href={`/products/${product?.slug}`}>
         <div className='relative aspect-square'>
           <Image
             src={product?.coverImage[productTypes.color]}
@@ -38,7 +38,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
 
       <div className='flex flex-col gap-4 p-4'>
         <h1 className='font-medium'>{product?.name}</h1>
-        <div className='flex items-center gap-4 text-xs'>
+        {/* <div className='flex items-center gap-4 text-xs'>
           <div>
             <span className='text-gray-500'>Màu</span>
             <div className='flex items-center gap-2'>
@@ -62,7 +62,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className='flex flex-col gap-1'>
           <div className='flex items-center gap-4'>

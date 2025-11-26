@@ -13,6 +13,7 @@ export const products = pgTable('products', {
   id: uuid('id').notNull().primaryKey().defaultRandom().unique(),
   model: jsonb('model').$type<Record<string, string>>().notNull(),
   name: varchar('name', { length: 255 }).notNull(),
+  slug: text('slug').unique(),
   price: numeric('price', { precision: 12, scale: 2 }).notNull(),
   coverImage: jsonb('cover_image').$type<Record<string, string>>().notNull(),
   discount: numeric('discount', { precision: 5, scale: 2 }),

@@ -1,5 +1,3 @@
-import { upload } from '@imagekit/next';
-
 const config = {
   env: {
     imagekit: {

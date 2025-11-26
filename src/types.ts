@@ -2,6 +2,7 @@ export type ProductType = {
   id: string | number;
   model: Record<string, string>;
   name: string;
+  slug?: string | null;
   price: string;
   coverImage: Record<string, string>;
   discount?: string | null;
