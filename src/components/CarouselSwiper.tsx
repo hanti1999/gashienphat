@@ -1,7 +1,7 @@
 'use client';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import React, { useState } from 'react';
+import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
+import React, { CSSProperties, useState } from 'react';
 import Image from 'next/image';
 
 const CarouselSwiper = ({
@@ -11,14 +11,16 @@ const CarouselSwiper = ({
   carousel: string[];
   coverImage: string;
 }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
   return (
     <>
       <Swiper
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
-        }}
+        style={
+          {
+            '--swiper-navigation-color': '#fff',
+            '--swiper-pagination-color': '#fff',
+          } as CSSProperties
+        }
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
