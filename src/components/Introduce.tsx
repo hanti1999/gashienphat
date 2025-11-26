@@ -3,8 +3,8 @@ import React from 'react';
 
 const Introduce = () => {
   return (
-    <div className='flex flex-row gap-5 mb-12 bg-gray-100 rounded-md'>
-      <div className='relative aspect-square flex-1'>
+    <div className='flex flex-row gap-5 mb-6 md:mb-12 bg-gray-100 rounded-md'>
+      <div className='hidden md:block md:flex-1 relative aspect-square'>
         <Image
           src={'/company.jpeg'}
           alt='image'

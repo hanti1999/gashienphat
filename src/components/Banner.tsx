@@ -27,17 +27,17 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
       >
         <SwiperSlide>
-          <div className='relative aspect-[16/6] mb-12 rounded-lg overflow-hidden'>
+          <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
             <Image src={'/banner1.jpg'} alt='Featured Product' fill />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='relative aspect-[16/6] mb-12 rounded-lg overflow-hidden'>
+          <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
             <Image src={'/Lavie.png'} alt='Featured Product' fill />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='relative aspect-[16/6] mb-12 rounded-lg overflow-hidden'>
+          <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
             <Image src={'/banner-38-ty.jpg'} alt='Featured Product' fill />
           </div>
         </SwiperSlide>
