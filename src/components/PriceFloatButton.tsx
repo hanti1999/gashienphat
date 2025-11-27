@@ -32,6 +32,12 @@ const PriceFloatButton = () => {
             <tbody>
               <tr>
                 <td className='border border-gray-300 px-4 py-2'>
+                  Phoenix 12kg
+                </td>
+                <td className='border border-gray-300 px-4 py-2'>305.000</td>
+              </tr>
+              <tr>
+                <td className='border border-gray-300 px-4 py-2'>
                   Sopet Gas One 12kg
                 </td>
                 <td className='border border-gray-300 px-4 py-2'>320.000</td>
@@ -41,12 +47,6 @@ const PriceFloatButton = () => {
                   Petro Việt Nam 12kg
                 </td>
                 <td className='border border-gray-300 px-4 py-2'>320.000</td>
-              </tr>
-              <tr>
-                <td className='border border-gray-300 px-4 py-2'>
-                  Phoenix 12kg
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>305.000</td>
               </tr>
               <tr>
                 <td className='border border-gray-300 px-4 py-2'>

@@ -7,7 +7,7 @@ const categories = [
   {
     name: 'Sản phẩm',
     icon: '/icons/shopping-bag.png',
-    slug: 'san-pham',
+    slug: '',
   },
   {
     name: 'Bếp gas',
@@ -39,15 +39,15 @@ const Categories = () => {
 
   const handleChange = (value: string | null) => {
     const params = new URLSearchParams(searchParams);
-    params.set('category', value || 'san-pham');
+    params.set('category', value || '');
     router.push(`${pathname}/?${params.toString()}`, { scroll: false });
   };
 
   return (
-    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 bg-gray-100 p-2 rounded-lg mb-4 text-sm'>
+    <div className='grid grid-cols-2 md:grid-cols-5 gap-2 bg-gray-100 p-2 rounded-lg mb-4 text-sm'>
       {categories.map((category) => (
         <div
-          className={`flex items-center justify-center gap-2 cursor-pointer px-2 py-1 rounded-md ${
+          className={`flex items-center justify-center gap-2 cursor-pointer p-2 rounded-md ${
             category.slug === selectedCategory ? 'bg-white' : 'text-gray-500'
           }`}
           key={category.name}

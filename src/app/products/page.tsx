@@ -1,15 +1,22 @@
 import ProductList from '@/components/ProductList';
 import { redirect } from 'next/navigation';
 import { headers } from 'next/headers';
-import React from 'react';
 import ratelimit from '../../../lib/ratelimit';
 
 const ProductPage = async ({
   searchParams,
 }: {
-  searchParams: Promise<{ category: string }>;
+  searchParams: Promise<{
+    category: string;
+    sort: string;
+    brand: string;
+    search: string;
+  }>;
 }) => {
   const category = (await searchParams).category;
+  const brand = (await searchParams).brand;
+  const sort = (await searchParams).sort;
+  const search = (await searchParams).search;
 
   const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
   const { success } = await ratelimit.limit(ip);
@@ -18,7 +25,13 @@ const ProductPage = async ({
 
   return (
     <div>
-      <ProductList category={category} params='products' />
+      <ProductList
+        category={category}
+        params='products'
+        sort={sort}
+        brand={brand}
+        search={search}
+      />
     </div>
   );
 };

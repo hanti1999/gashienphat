@@ -19,4 +19,12 @@ export type ProductDetail = {
   video: string;
 };
 
+export type BrandType = {
+  id: string | number;
+  name: string | null;
+  image: string;
+  description: string | null;
+  slug: string | null;
+};
+
 export type ProductsType = ProductType[];

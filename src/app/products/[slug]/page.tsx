@@ -79,7 +79,7 @@ const ProductPage = async ({
             <span> | </span>
             <p>Danh mục: {result[0].categories!.name}</p>
             <span> | </span>
-            <p>Thương hiệu: {result[0].brands!.name}</p>
+            <p>Hãng: {result[0].brands!.name}</p>
           </div>
           <div className='flex items-center gap-4'>
             <p className='text-2xl font-bold text-[#fb77c5]'>

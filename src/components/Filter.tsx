@@ -22,10 +22,10 @@ const Filter = () => {
         className='ring-1 ring-gray-200 shadow-md p-1 rounded-sm'
         onChange={(e) => handleFilter(e.target.value)}
       >
-        <option value='moi-nhat'>Mới nhất</option>
-        <option value='cu-nhat'>Cũ nhất</option>
-        <option value='tang-dan'>Giá thấp đến cao</option>
-        <option value='giam-dan'>Giá cao đến thấp</option>
+        <option value='newest'>Mới nhất</option>
+        <option value='oldest'>Cũ nhất</option>
+        <option value='price-asc'>Giá thấp đến cao</option>
+        <option value='price-desc'>Giá cao đến thấp</option>
       </select>
     </div>
   );
