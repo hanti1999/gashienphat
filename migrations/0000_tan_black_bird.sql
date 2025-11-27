@@ -26,17 +26,18 @@ CREATE TABLE "product_details" (
 --> statement-breakpoint
 CREATE TABLE "products" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
-	"model" jsonb NOT NULL,
+	"model" text NOT NULL,
 	"name" varchar(255) NOT NULL,
+	"slug" text,
 	"price" numeric(12, 2) NOT NULL,
-	"cover_image" jsonb NOT NULL,
+	"cover_image" text NOT NULL,
 	"discount" numeric(5, 2),
-	"final_price" numeric(12, 2) NOT NULL,
-	"colors" text[] NOT NULL,
+	"final_price" numeric(12, 2) GENERATED ALWAYS AS (numeric_mul("price", (1 - ("discount" / 100)))) STORED,
 	"brand_id" uuid NOT NULL,
 	"category_id" uuid NOT NULL,
 	"created_at" timestamp with time zone DEFAULT now(),
-	CONSTRAINT "products_id_unique" UNIQUE("id")
+	CONSTRAINT "products_id_unique" UNIQUE("id"),
+	CONSTRAINT "products_slug_unique" UNIQUE("slug")
 );
 --> statement-breakpoint
 ALTER TABLE "product_details" ADD CONSTRAINT "product_details_product_id_products_id_fk" FOREIGN KEY ("product_id") REFERENCES "public"."products"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint

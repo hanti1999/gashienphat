@@ -1,5 +1,5 @@
 {
-  "id": "8671a593-4a4a-43b4-9d0d-5b039b6f4e35",
+  "id": "23923beb-3b38-4358-acc0-16e2fe2a45f8",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -197,7 +197,7 @@
         },
         "model": {
           "name": "model",
-          "type": "jsonb",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -207,6 +207,12 @@
           "primaryKey": false,
           "notNull": true
         },
+        "slug": {
+          "name": "slug",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "price": {
           "name": "price",
           "type": "numeric(12, 2)",
@@ -215,7 +221,7 @@
         },
         "cover_image": {
           "name": "cover_image",
-          "type": "jsonb",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -229,13 +235,11 @@
           "name": "final_price",
           "type": "numeric(12, 2)",
           "primaryKey": false,
-          "notNull": true
-        },
-        "colors": {
-          "name": "colors",
-          "type": "text[]",
-          "primaryKey": false,
-          "notNull": true
+          "notNull": false,
+          "generated": {
+            "as": "numeric_mul(\"price\", (1 - (\"discount\" / 100)))",
+            "type": "stored"
+          }
         },
         "brand_id": {
           "name": "brand_id",
@@ -293,6 +297,13 @@
           "nullsNotDistinct": false,
           "columns": [
             "id"
+          ]
+        },
+        "products_slug_unique": {
+          "name": "products_slug_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "slug"
           ]
         }
       },

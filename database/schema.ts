@@ -4,21 +4,23 @@ import {
   text,
   varchar,
   numeric,
-  jsonb,
   timestamp,
   uniqueIndex,
 } from 'drizzle-orm/pg-core';
+import { sql } from 'drizzle-orm';
 
 export const products = pgTable('products', {
   id: uuid('id').notNull().primaryKey().defaultRandom().unique(),
-  model: jsonb('model').$type<Record<string, string>>().notNull(),
+  model: text('model').notNull(),
   name: varchar('name', { length: 255 }).notNull(),
   slug: text('slug').unique(),
   price: numeric('price', { precision: 12, scale: 2 }).notNull(),
-  coverImage: jsonb('cover_image').$type<Record<string, string>>().notNull(),
+  coverImage: text('cover_image').notNull(),
   discount: numeric('discount', { precision: 5, scale: 2 }),
-  finalPrice: numeric('final_price', { precision: 12, scale: 2 }).notNull(),
-  colors: text('colors').array().notNull(),
+  finalPrice: numeric('final_price', {
+    precision: 12,
+    scale: 2,
+  }).generatedAlwaysAs(sql`numeric_mul("price", (1 - ("discount" / 100)))`),
   brandId: uuid('brand_id')
     .notNull()
     .references(() => brands.id, { onDelete: 'restrict' }),

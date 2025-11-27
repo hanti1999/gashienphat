@@ -33,13 +33,9 @@ export const generateMetadata = async ({
 
 const ProductPage = async ({
   params,
-  searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ color: string }>;
 }) => {
-  const color = (await searchParams).color;
-
   const result = await db
     .select()
     .from(products)
@@ -49,8 +45,6 @@ const ProductPage = async ({
     .where(eq(products.slug, (await params).slug));
 
   // console.log(JSON.stringify(result, null, 2));
-
-  const selectedColor = color || (result[0].products.colors[0] as string);
 
   const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
   const { success } = await ratelimit.limit(ip);
@@ -64,7 +58,7 @@ const ProductPage = async ({
         <div className='w-full lg:w-5/12'>
           <CarouselSwiper
             carousel={result[0].product_details!.carousel}
-            coverImage={result[0].products.coverImage[selectedColor]}
+            coverImage={result[0].products.coverImage}
           />
           <ModalClient>
             <div className='aspect-[3/4]'>
@@ -81,7 +75,7 @@ const ProductPage = async ({
         <div className='w-full lg:w-7/12 flex flex-col gap-4'>
           <h1 className='text-2xl font-bold'>{result[0].products.name}</h1>
           <div className='flex items-center gap-2 text-gray-500'>
-            <p>Model: {result[0].products.model[selectedColor]}</p>
+            <p>Model: {result[0].products.model}</p>
             <span> | </span>
             <p>Danh mục: {result[0].categories!.name}</p>
             <span> | </span>
@@ -101,10 +95,7 @@ const ProductPage = async ({
             </div> */}
           </div>
 
-          <ProductInteraction
-            product={result[0].products}
-            selectedColor={selectedColor}
-          />
+          <ProductInteraction />
           <p className='text-gray-500'>Mô tả sản phẩm:</p>
           <h4>🔥{result[0].product_details!.shortDescription}🔥</h4>
           {result[0].product_details!.description.map((desc, index) => (

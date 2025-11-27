@@ -1,15 +1,14 @@
 export type ProductType = {
   id: string | number;
-  model: Record<string, string>;
+  model: string;
   name: string;
   slug?: string | null;
   price: string;
-  coverImage: Record<string, string>;
+  coverImage: string;
   discount?: string | null;
-  finalPrice: string;
+  finalPrice?: string | null;
   brandId: string;
   categoryId: string;
-  colors: string[];
   createdAt?: Date | null;
 };
 
