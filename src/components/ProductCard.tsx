@@ -19,7 +19,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       </Link>
 
       <div className='flex flex-col gap-4 p-4'>
-        <h1 className='font-medium'>{product?.name}</h1>
+        <h1 className='font-medium line-clamp-2'>{product?.name}</h1>
         <div className='flex flex-col gap-1'>
           <div className='flex items-center gap-4'>
             <p className='line-through text-sm'>

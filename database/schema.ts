@@ -54,7 +54,7 @@ export const brands = pgTable('brands', {
   name: varchar('name', { length: 255 }).notNull(),
   image: text('image').notNull(),
   description: text('description'),
-  slug: text('slug').unique(),
+  slug: text('slug').notNull().unique(),
 });
 
 export const categories = pgTable('categories', {
@@ -62,5 +62,5 @@ export const categories = pgTable('categories', {
   name: varchar('name', { length: 255 }).notNull(),
   image: text('image').notNull(),
   description: text('description'),
-  slug: text('slug').unique(),
+  slug: text('slug').notNull().unique(),
 });

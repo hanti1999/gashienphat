@@ -32,7 +32,7 @@ const Filter = ({ brands }: { brands: BrandType[] }) => {
 
   return (
     <div>
-      <div className='flex items-center gap-4 mt-6'>
+      <div className='flex items-center justify-center md:justify-start gap-4 mt-6 flex-wrap'>
         <Link
           href={pathname}
           className={`${!searchParams.toString() ? 'hidden' : ''}`}
@@ -51,8 +51,8 @@ const Filter = ({ brands }: { brands: BrandType[] }) => {
           </div>
         ))}
       </div>
-      <div className='flex items-center gap-4 text-sm text-gray-500 mb-6'>
-        <span>Sắp xếp theo: </span>
+      <div className='flex items-center justify-center md:justify-start gap-4 text-sm text-gray-500 mt-2 mb-6'>
+        <span>Sắp xếp: </span>
         {sortOptions.map((option) => (
           <span
             className={`cursor-pointer ${

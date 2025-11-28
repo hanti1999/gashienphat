@@ -24,7 +24,7 @@ export type BrandType = {
   name: string;
   image: string;
   description: string | null;
-  slug: string | null;
+  slug: string;
 };
 
 export type ProductsType = ProductType[];

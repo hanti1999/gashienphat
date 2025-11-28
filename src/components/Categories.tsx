@@ -5,11 +5,6 @@ import Image from 'next/image';
 
 const categories = [
   {
-    name: 'Sản phẩm',
-    icon: '/icons/shopping-bag.png',
-    slug: '',
-  },
-  {
     name: 'Bếp gas',
     icon: '/icons/gas-cooktop.png',
     slug: 'bep-gas',
