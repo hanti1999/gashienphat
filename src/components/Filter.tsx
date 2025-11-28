@@ -1,32 +1,70 @@
 'use client';
 
+import { BrandType } from '@/types';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Filter = () => {
+const sortOptions = [
+  { label: 'Mới', value: 'newest' },
+  { label: 'Giá thấp - cao', value: 'price-asc' },
+  { label: 'Giá cao - thấp', value: 'price-desc' },
+];
+
+const Filter = ({ brands }: { brands: BrandType[] }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const selectdSort = searchParams.get('sort');
+  const selectedBrand = searchParams.get('brand');
 
-  const handleFilter = (value: string) => {
+  const handleSort = (value: string) => {
     const params = new URLSearchParams(searchParams);
     params.set('sort', value);
     router.push(`${pathname}/?${params.toString()}`, { scroll: false });
   };
 
+  const handleBrand = (value: string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('brand', value);
+    router.push(`${pathname}/?${params.toString()}`, { scroll: false });
+  };
+
   return (
-    <div className='flex items-center justify-end gap-2 text-sm text-gray-500 my-6'>
-      <span>Sắp xếp theo: </span>
-      <select
-        name='sort'
-        id='sort'
-        className='ring-1 ring-gray-200 shadow-md p-1 rounded-sm'
-        onChange={(e) => handleFilter(e.target.value)}
-      >
-        <option value='newest'>Mới nhất</option>
-        <option value='oldest'>Cũ nhất</option>
-        <option value='price-asc'>Giá thấp đến cao</option>
-        <option value='price-desc'>Giá cao đến thấp</option>
-      </select>
+    <div>
+      <div className='flex items-center gap-4 mt-6'>
+        <Link
+          href={pathname}
+          className={`${!searchParams.toString() ? 'hidden' : ''}`}
+        >
+          <span className='text-red-500'>Xóa bộ lọc</span>
+        </Link>
+        {brands.map((brand) => (
+          <div
+            className={`${
+              selectedBrand === brand.slug ? 'ring ring-[#fb77c5]' : ''
+            } rounded-md bg-gray-100 p-1 size-15 relative aspect-video cursor-pointer`}
+            key={brand.slug}
+            onClick={() => handleBrand(brand.slug)}
+          >
+            <Image src={brand.image} alt='brand-img' fill />
+          </div>
+        ))}
+      </div>
+      <div className='flex items-center gap-4 text-sm text-gray-500 mb-6'>
+        <span>Sắp xếp theo: </span>
+        {sortOptions.map((option) => (
+          <span
+            className={`cursor-pointer ${
+              option.value === selectdSort ? 'text-[#fb77c5]' : ''
+            }`}
+            key={option.label}
+            onClick={() => handleSort(option.value)}
+          >
+            {option.label}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

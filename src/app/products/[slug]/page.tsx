@@ -60,16 +60,18 @@ const ProductPage = async ({
             carousel={result[0].product_details!.carousel}
             coverImage={result[0].products.coverImage}
           />
-          <ModalClient>
-            <div className='aspect-[3/4]'>
-              <video
-                src={result[0].product_details!.video}
-                controls
-                autoPlay={false}
-                className='rounded-lg'
-              />
-            </div>
-          </ModalClient>
+          {result[0].product_details?.video !== 'null' && (
+            <ModalClient>
+              <div className='aspect-[3/4]'>
+                <video
+                  src={result[0].product_details!.video}
+                  controls
+                  autoPlay={false}
+                  className='rounded-lg'
+                />
+              </div>
+            </ModalClient>
+          )}
         </div>
 
         <div className='w-full lg:w-7/12 flex flex-col gap-4'>

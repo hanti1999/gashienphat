@@ -30,8 +30,8 @@ const Brands = ({ brands }: { brands: BrandType[] }) => {
             <Image
               src={item.image}
               alt={'brand-image'}
-              width={100}
-              height={100}
+              width={120}
+              height={120}
             />
           </div>
         ))}

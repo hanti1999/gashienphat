@@ -21,7 +21,7 @@ export type ProductDetail = {
 
 export type BrandType = {
   id: string | number;
-  name: string | null;
+  name: string;
   image: string;
   description: string | null;
   slug: string | null;

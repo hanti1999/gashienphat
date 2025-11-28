@@ -54,14 +54,12 @@ const Footer = () => {
         </div>
 
         <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
-          <p className='text-sm'>Links</p>
           <Link href={'/'}>Trang chủ</Link>
           <Link href={'/'}>Liên hệ</Link>
           <Link href={'/'}>Chính sách</Link>
         </div>
 
         <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
-          <p className='text-sm'>Links</p>
           <Link href={'/'}>Tất cả sản phẩm</Link>
           <Link href={'/'}>Sản phẩm mới</Link>
           <Link href={'/'}>Sản phẩm bán chạy</Link>

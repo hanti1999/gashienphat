@@ -29,14 +29,15 @@ const ProductList = async ({
     case 'price-desc':
       orderBySQL = desc(products.finalPrice);
       break;
-    case 'oldest':
-      orderBySQL = asc(products.createdAt);
-      break;
   }
 
   const filters = [];
 
-  if (category) filters.push(eq(categories.slug, category));
+  if (category) {
+    filters.push(eq(categories.slug, category));
+  } else if (params === 'homepage' && !brand && !search) {
+    filters.push(eq(categories.slug, 'bep-gas'));
+  }
 
   if (brand) filters.push(eq(brands.slug, brand));
 
@@ -58,7 +59,7 @@ const ProductList = async ({
   return (
     <div className='w-full'>
       <Categories />
-      {params === 'products' && <Filter />}
+      {params === 'products' && <Filter brands={brandsList} />}
       {data.length === 0 ? (
         <div className='text-center col-span-full py-10 text-gray-500'>
           Không tìm thấy sản phẩm nào phù hợp.
@@ -78,7 +79,7 @@ const ProductList = async ({
           Tất cả sản phẩm
         </Link>
       )}
-      <Brands brands={brandsList} />
+      {params === 'homepage' && <Brands brands={brandsList} />}
     </div>
   );
 };
