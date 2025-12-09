@@ -1,11 +1,14 @@
-import { asc, desc, eq, ilike, and } from 'drizzle-orm';
+import { asc, desc, eq, ilike, and, sql } from 'drizzle-orm';
 import Link from 'next/link';
 import { categories, products, brands } from '../../database/schema';
 import { db } from '../../database/drizzle';
+import { Pagination } from './Pagination';
 import ProductCard from './ProductCard';
 import Categories from './Categories';
 import Filter from './Filter';
 import Brands from './Brands';
+
+const PAGE_SIZE = 12;
 
 const ProductList = async ({
   category,
@@ -13,15 +16,19 @@ const ProductList = async ({
   sort,
   search,
   params,
+  page,
 }: {
   category?: string;
   brand?: string;
   sort?: string;
   search?: string;
   params: 'homepage' | 'products';
+  page?: string;
 }) => {
-  let orderBySQL = desc(products.createdAt);
+  const currentPage = Number(page) || 1;
+  const offset = (currentPage - 1) * PAGE_SIZE;
 
+  let orderBySQL = desc(products.createdAt);
   switch (sort) {
     case 'price-asc':
       orderBySQL = asc(products.finalPrice);
@@ -50,11 +57,26 @@ const ProductList = async ({
     .leftJoin(brands, eq(products.brandId, brands.id))
     .where(and(...filters))
     .orderBy(orderBySQL)
-    .limit(8);
+    .limit(PAGE_SIZE)
+    .offset(offset);
+
+  const countQuery = db
+    .select({ count: sql<number>`count(${products.id})` })
+    .from(products)
+    .leftJoin(categories, eq(products.categoryId, categories.id))
+    .leftJoin(brands, eq(products.brandId, brands.id))
+    .where(and(...filters));
 
   const brandsQuery = db.select().from(brands);
 
-  const [data, brandsList] = await Promise.all([productQuery, brandsQuery]);
+  const [data, totalResult, brandsList] = await Promise.all([
+    productQuery,
+    countQuery,
+    brandsQuery,
+  ]);
+
+  const totalItems = Number(totalResult[0]?.count || 0);
+  const totalPages = Math.ceil(totalItems / PAGE_SIZE);
 
   return (
     <div className='w-full'>
@@ -71,13 +93,17 @@ const ProductList = async ({
           ))}
         </div>
       )}
-      {params != 'products' && (
-        <Link
-          href={category ? `/products/?category=${category}` : '/products'}
-          className='flex justify-end mt-4 underline text-sm text-gray-500'
-        >
-          Tất cả sản phẩm
-        </Link>
+      {params === 'products' ? (
+        <Pagination totalPages={totalPages} />
+      ) : (
+        data.length > 0 && (
+          <Link
+            href='/products'
+            className='flex justify-end mt-4 underline text-sm text-gray-500'
+          >
+            Xem tất cả sản phẩm
+          </Link>
+        )
       )}
       {params === 'homepage' && <Brands brands={brandsList} />}
     </div>

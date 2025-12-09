@@ -34,31 +34,31 @@ const PriceFloatButton = () => {
                 <td className='border border-gray-300 px-4 py-2'>
                   Phoenix 12kg
                 </td>
-                <td className='border border-gray-300 px-4 py-2'>305.000</td>
+                <td className='border border-gray-300 px-4 py-2'>314.000</td>
               </tr>
               <tr>
                 <td className='border border-gray-300 px-4 py-2'>
                   Sopet Gas One 12kg
                 </td>
-                <td className='border border-gray-300 px-4 py-2'>320.000</td>
+                <td className='border border-gray-300 px-4 py-2'>329.000</td>
               </tr>
               <tr>
                 <td className='border border-gray-300 px-4 py-2'>
                   Petro Việt Nam 12kg
                 </td>
-                <td className='border border-gray-300 px-4 py-2'>320.000</td>
+                <td className='border border-gray-300 px-4 py-2'>329.000</td>
               </tr>
               <tr>
                 <td className='border border-gray-300 px-4 py-2'>
                   Sopet Gas (đỏ, xanh) 12kg
                 </td>
-                <td className='border border-gray-300 px-4 py-2'>355.000</td>
+                <td className='border border-gray-300 px-4 py-2'>364.000</td>
               </tr>
               <tr>
                 <td className='border border-gray-300 px-4 py-2'>
                   Siam Gas 12kg
                 </td>
-                <td className='border border-gray-300 px-4 py-2'>355.000</td>
+                <td className='border border-gray-300 px-4 py-2'>364.000</td>
               </tr>
             </tbody>
           </table>

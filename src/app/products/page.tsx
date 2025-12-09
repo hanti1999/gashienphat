@@ -11,12 +11,14 @@ const ProductPage = async ({
     sort: string;
     brand: string;
     search: string;
+    page: string;
   }>;
 }) => {
   const category = (await searchParams).category;
   const brand = (await searchParams).brand;
   const sort = (await searchParams).sort;
   const search = (await searchParams).search;
+  const page = (await searchParams).page;
 
   const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
   const { success } = await ratelimit.limit(ip);
@@ -31,6 +33,7 @@ const ProductPage = async ({
         sort={sort}
         brand={brand}
         search={search}
+        page={page}
       />
     </div>
   );
