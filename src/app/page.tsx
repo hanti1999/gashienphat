@@ -1,6 +1,6 @@
 import ProductList from '@/components/ProductList';
-import Banner from '@/components/Banner';
 import Introduce from '@/components/Introduce';
+import Banner from '@/components/Banner';
 
 const Homepage = async ({
   searchParams,
@@ -9,7 +9,7 @@ const Homepage = async ({
 }) => {
   const category = (await searchParams).category;
   return (
-    <div className=''>
+    <div>
       <Banner />
       <Introduce />
       <ProductList category={category} params='homepage' />

@@ -6,7 +6,7 @@ import { BrandType } from '@/types';
 const Brands = ({ brands }: { brands: BrandType[] }) => {
   return (
     <div className='mt-6 md:mt-12 p-2'>
-      <h2 className='text-center font-semibold uppercase text-3xl text-[#302671]'>
+      <h2 className='text-center font-medium uppercase text-3xl text-[#302671]'>
         ___ Thương hiệu ___
       </h2>
       <div className='grid grid-cols-2 md:grid-cols-5 gap-2'>

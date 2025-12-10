@@ -97,12 +97,14 @@ const ProductList = async ({
         <Pagination totalPages={totalPages} />
       ) : (
         data.length > 0 && (
-          <Link
-            href='/products'
-            className='flex justify-end mt-4 underline text-sm text-gray-500'
-          >
-            Xem tất cả sản phẩm
-          </Link>
+          <div className='mt-4 flex justify-center'>
+            <Link
+              href='/products'
+              className='uppercase px-4 py-2 bg-[#fb77c5] hover:bg-pink-300 shadow-lg cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out rounded-2xl text-sm text-white'
+            >
+              Xem thêm
+            </Link>
+          </div>
         )
       )}
       {params === 'homepage' && <Brands brands={brandsList} />}

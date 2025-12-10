@@ -1,26 +1,27 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Roboto, Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
-import ScrollToTop from '@/components/ScrollToTop';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import 'swiper/css';
-import ZaloFloatButton from '@/components/ZaloFloatButton';
-import FacebookFloatButton from '@/components/FacebookFloatButton';
-import CallFloatButton from '@/components/CallFloatButton';
 import PriceFloatButton from '@/components/PriceFloatButton';
+import FloatButton from '@/components/FloatButton';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const montserrat = Montserrat({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+  variable: '--font-montserrat',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const roboto = Roboto({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+  variable: '--font-roboto',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -36,17 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${montserrat.className} antialiased`}>
         <div className='mx-auto p-4 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl'>
           <Navbar />
           {children}
-          <ScrollToTop />
-          <ZaloFloatButton />
-          <FacebookFloatButton />
           <PriceFloatButton />
-          <CallFloatButton />
+          <FloatButton />
         </div>
         <Footer />
       </body>
