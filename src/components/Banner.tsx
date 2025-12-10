@@ -1,10 +1,12 @@
 'use client';
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { CSSProperties } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BannerType } from '@/types';
 
-const Banner = () => {
+const Banner = async ({ bannerList }: { bannerList: BannerType[] }) => {
   return (
     <>
       <Swiper
@@ -26,21 +28,19 @@ const Banner = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
       >
-        <SwiperSlide>
-          <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
-            <Image src={'/banner1.jpg'} alt='Featured Product' fill />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
-            <Image src={'/Lavie.png'} alt='Featured Product' fill />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
-            <Image src={'/banner-38-ty.jpg'} alt='Featured Product' fill />
-          </div>
-        </SwiperSlide>
+        {bannerList.map((banner) => (
+          <SwiperSlide key={banner.id}>
+            <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
+              {banner.link ? (
+                <Link href={banner.link}>
+                  <Image src={banner.image} alt='Featured Product' fill />
+                </Link>
+              ) : (
+                <Image src={banner.image} alt='Featured Product' fill />
+              )}
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

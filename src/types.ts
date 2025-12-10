@@ -27,4 +27,14 @@ export type BrandType = {
   slug: string;
 };
 
+export type BannerType = {
+  id: string | number;
+  name: string;
+  link: string | null;
+  image: string;
+  sortOrder: number | null;
+  active: boolean | null;
+  createdAt?: Date | null;
+};
+
 export type ProductsType = ProductType[];

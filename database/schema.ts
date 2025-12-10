@@ -6,6 +6,8 @@ import {
   numeric,
   timestamp,
   uniqueIndex,
+  boolean,
+  integer,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 
@@ -63,4 +65,14 @@ export const categories = pgTable('categories', {
   image: text('image').notNull(),
   description: text('description'),
   slug: text('slug').notNull().unique(),
+});
+
+export const banners = pgTable('banners', {
+  id: uuid('id').notNull().primaryKey().defaultRandom().unique(),
+  name: varchar('name', { length: 255 }).notNull(),
+  image: text('image').notNull(),
+  link: text('link'),
+  active: boolean('active').default(true),
+  sortOrder: integer('sort_order').default(0),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });

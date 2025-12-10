@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Phone } from 'lucide-react';
+import { ArrowUpToLine, Phone } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const FloatButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,20 +39,7 @@ const FloatButton = () => {
             className='bg-[#fb77c5] hover:bg-pink-300 cursor-pointer text-white p-2 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50'
             aria-label='Scroll to top'
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-6 w-6'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M5 10l7-7m0 0l7 7m-7-7v18'
-              />
-            </svg>
+            <ArrowUpToLine />
           </button>
         )}
       </div>

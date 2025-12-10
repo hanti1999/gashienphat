@@ -9,7 +9,7 @@ const PriceFloatButton = () => {
     <div className='fixed bottom-8 left-8 z-50'>
       <button
         onClick={() => setOpen(true)}
-        className='bg-[#fb77c5] hover:bg-pink-300 cursor-pointer flex items-center justify-center gap-2 text-white p-2 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50'
+        className='bg-[#fb77c5] hover:bg-pink-300 cursor-pointer flex items-center justify-center gap-2 text-white py-2 px-4 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50'
       >
         <p className='font-semibold text-sm'>GIÁ GAS</p>
         <MousePointerClick />
