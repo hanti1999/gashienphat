@@ -6,7 +6,7 @@ import { Pagination } from './Pagination';
 import ProductCard from './ProductCard';
 import Categories from './Categories';
 import Filter from './Filter';
-import Brands from './Brands';
+import { BrandType } from '@/types';
 
 const PAGE_SIZE = 12;
 
@@ -17,6 +17,7 @@ const ProductList = async ({
   search,
   params,
   page,
+  brandsList,
 }: {
   category?: string;
   brand?: string;
@@ -24,6 +25,7 @@ const ProductList = async ({
   search?: string;
   params: 'homepage' | 'products';
   page?: string;
+  brandsList: BrandType[];
 }) => {
   const currentPage = Number(page) || 1;
   const offset = (currentPage - 1) * PAGE_SIZE;
@@ -67,13 +69,7 @@ const ProductList = async ({
     .leftJoin(brands, eq(products.brandId, brands.id))
     .where(and(...filters));
 
-  const brandsQuery = db.select().from(brands);
-
-  const [data, totalResult, brandsList] = await Promise.all([
-    productQuery,
-    countQuery,
-    brandsQuery,
-  ]);
+  const [data, totalResult] = await Promise.all([productQuery, countQuery]);
 
   const totalItems = Number(totalResult[0]?.count || 0);
   const totalPages = Math.ceil(totalItems / PAGE_SIZE);
@@ -107,7 +103,6 @@ const ProductList = async ({
           </div>
         )
       )}
-      {params === 'homepage' && <Brands brands={brandsList} />}
     </div>
   );
 };

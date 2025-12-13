@@ -1,9 +1,11 @@
 import ProductList from '@/components/ProductList';
 import Introduce from '@/components/Introduce';
 import Banner from '@/components/Banner';
-import { banners } from '../../database/schema';
+import Brands from '@/components/Brands';
+import { banners, brands } from '../../database/schema';
 import { db } from '../../database/drizzle';
 import { asc, eq } from 'drizzle-orm';
+import Features from '@/components/Features';
 
 const Homepage = async ({
   searchParams,
@@ -12,17 +14,30 @@ const Homepage = async ({
 }) => {
   const category = (await searchParams).category;
 
-  const bannerList = await db
+  const bannerQuery = await db
     .select()
     .from(banners)
     .where(eq(banners.active, true))
     .orderBy(asc(banners.sortOrder));
 
+  const brandsQuery = db.select().from(brands);
+
+  const [bannerList, brandsList] = await Promise.all([
+    bannerQuery,
+    brandsQuery,
+  ]);
+
   return (
     <div>
       <Banner bannerList={bannerList} />
       <Introduce />
-      <ProductList category={category} params='homepage' />
+      {/* <ProductList
+        category={category}
+        brandsList={brandsList}
+        params='homepage'
+      /> */}
+      <Features />
+      <Brands brands={brandsList} />
     </div>
   );
 };

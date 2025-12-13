@@ -1,4 +1,5 @@
 'use client';
+
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CSSProperties } from 'react';
@@ -6,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BannerType } from '@/types';
 
-const Banner = async ({ bannerList }: { bannerList: BannerType[] }) => {
+const Banner = ({ bannerList }: { bannerList: BannerType[] }) => {
   return (
     <>
       <Swiper
@@ -30,9 +31,9 @@ const Banner = async ({ bannerList }: { bannerList: BannerType[] }) => {
       >
         {bannerList.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <div className='relative aspect-[16/6] mb-6 md:mb-12 rounded-lg overflow-hidden'>
+            <div className='relative aspect-[2/1] mb-6 md:mb-12 rounded-lg overflow-hidden'>
               {banner.link ? (
-                <Link href={banner.link}>
+                <Link href={banner.link} target='_blank'>
                   <Image src={banner.image} alt='Featured Product' fill />
                 </Link>
               ) : (
