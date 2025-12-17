@@ -13,7 +13,7 @@ const Introduce = () => {
         />
       </div>
       <div className='flex-1 p-2'>
-        <h1 className='uppercase font-bold text-lg text-[#fb77c5]'>
+        <h1 className='uppercase font-bold text-[#fb77c5]'>
           Giới thiệu về chúng tôi
         </h1>
         <h1 className='uppercase font-bold text-xl text-[#302671] my-4'>

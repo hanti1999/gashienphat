@@ -1,11 +1,10 @@
-import ProductList from '@/components/ProductList';
 import Introduce from '@/components/Introduce';
+import Features from '@/components/Features';
 import Banner from '@/components/Banner';
 import Brands from '@/components/Brands';
 import { banners, brands } from '../../database/schema';
 import { db } from '../../database/drizzle';
 import { asc, eq } from 'drizzle-orm';
-import Features from '@/components/Features';
 
 const Homepage = async ({
   searchParams,

@@ -1,14 +1,14 @@
 import { Roboto, Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
+import FloatButton from '@/components/FloatButton';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Map from '@/components/Map';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import 'swiper/css';
-import PriceFloatButton from '@/components/PriceFloatButton';
-import FloatButton from '@/components/FloatButton';
 
 const montserrat = Montserrat({
   subsets: ['latin', 'vietnamese'],
@@ -38,12 +38,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${montserrat.className} antialiased`}>
-        <div className='mx-auto p-4 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl'>
+        <div className='container'>
           <Navbar />
           {children}
           {/* <PriceFloatButton /> */}
           <FloatButton />
         </div>
+        <Map />
         <Footer />
       </body>
     </html>

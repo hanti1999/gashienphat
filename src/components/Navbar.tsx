@@ -1,8 +1,6 @@
-import { Home } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import SearchBar from './SearchBar';
 
 const Navbar = () => {
   return (
@@ -26,7 +24,7 @@ const Navbar = () => {
         </div>
       </Link>
       {/* Right */}
-      <SearchBar />
+      {/* <SearchBar /> */}
     </nav>
   );
 };

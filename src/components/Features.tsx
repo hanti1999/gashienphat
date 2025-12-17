@@ -9,9 +9,14 @@ const features = [
     desc: 'Gas chính hãng, an toàn, kiểm định đầy đủ',
   },
   {
-    title: 'Bếp gas/Bếp điện',
+    title: 'Bếp gas',
     img: '/features/bep-gas.jpg',
     desc: 'Bếp gas chính hãng, đa dạng mẫu mã, mức giá, được bảo hành đầy đủ',
+  },
+  {
+    title: 'Phụ kiện',
+    img: '/features/phu-kien.jpg',
+    desc: 'Phụ kiện đa dạng, chất lượng cao, giá cả hợp lý',
   },
 ];
 
