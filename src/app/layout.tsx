@@ -40,10 +40,10 @@ export default function RootLayout({
       <body className={`${montserrat.className} antialiased`}>
         <div className='container'>
           <Navbar />
-          {children}
-          {/* <PriceFloatButton /> */}
-          <FloatButton />
         </div>
+        {children}
+        {/* <PriceFloatButton /> */}
+        <FloatButton />
         <Map />
         <Footer />
       </body>

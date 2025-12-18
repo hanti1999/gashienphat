@@ -31,7 +31,7 @@ const Banner = ({ bannerList }: { bannerList: BannerType[] }) => {
       >
         {bannerList.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <div className='relative aspect-[2/1] mb-6 md:mb-12 rounded-lg overflow-hidden'>
+            <div className='relative aspect-[2/1] mb-6 md:mb-12 overflow-hidden'>
               {banner.link ? (
                 <Link href={banner.link} target='_blank'>
                   <Image src={banner.image} alt='Featured Product' fill />

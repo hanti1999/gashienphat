@@ -29,14 +29,16 @@ const Homepage = async ({
   return (
     <div>
       <Banner bannerList={bannerList} />
-      <Introduce />
-      {/* <ProductList
+      <div className='container'>
+        <Introduce />
+        {/* <ProductList
         category={category}
         brandsList={brandsList}
         params='homepage'
       /> */}
-      <Features />
-      <Brands brands={brandsList} />
+        <Features />
+        <Brands brands={brandsList} />
+      </div>
     </div>
   );
 };
