@@ -25,7 +25,7 @@ const ProductList = async ({
   search?: string;
   params: 'homepage' | 'products';
   page?: string;
-  brandsList: BrandType[];
+  brandsList?: BrandType[];
 }) => {
   const currentPage = Number(page) || 1;
   const offset = (currentPage - 1) * PAGE_SIZE;

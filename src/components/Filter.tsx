@@ -11,7 +11,7 @@ const sortOptions = [
   { label: 'Giá cao - thấp', value: 'price-desc' },
 ];
 
-const Filter = ({ brands }: { brands: BrandType[] }) => {
+const Filter = ({ brands }: { brands?: BrandType[] }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -39,7 +39,7 @@ const Filter = ({ brands }: { brands: BrandType[] }) => {
         >
           <span className='text-red-500'>Xóa bộ lọc</span>
         </Link>
-        {brands.map((brand) => (
+        {brands?.map((brand) => (
           <div
             className={`${
               selectedBrand === brand.slug ? 'ring ring-[#fb77c5]' : ''
