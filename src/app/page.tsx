@@ -5,6 +5,8 @@ import Brands from '@/components/Brands';
 import { banners, brands } from '../../database/schema';
 import { db } from '../../database/drizzle';
 import { asc, eq } from 'drizzle-orm';
+import FadeInOnScroll from '../../lib/FadeInOnScroll';
+import Services from '@/components/Services';
 
 const Homepage = async ({
   searchParams,
@@ -30,14 +32,31 @@ const Homepage = async ({
     <div>
       <Banner bannerList={bannerList} />
       <div className='container'>
-        <Introduce />
-        {/* <ProductList
+        <FadeInOnScroll>
+          <Introduce />
+        </FadeInOnScroll>
+      </div>
+      {/* <ProductList
         category={category}
         brandsList={brandsList}
         params='homepage'
       /> */}
-        <Features />
-        <Brands brands={brandsList} />
+      <div className='bg-gray-100'>
+        <div className='container '>
+          <FadeInOnScroll>
+            <Features />
+          </FadeInOnScroll>
+        </div>
+      </div>
+      <div className='container'>
+        <FadeInOnScroll>
+          <Services />
+        </FadeInOnScroll>
+      </div>
+      <div className='container'>
+        <FadeInOnScroll>
+          <Brands brands={brandsList} />
+        </FadeInOnScroll>
       </div>
     </div>
   );

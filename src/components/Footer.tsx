@@ -5,7 +5,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className=''>
-      <div className='grid grid-cols-1 md:grid-cols-5 bg-gray-700 text-white p-8 rounded-bl-lg rounded-br-lg'>
+      <div className='grid grid-cols-1 md:grid-cols-3 bg-gray-700 text-white p-8 rounded-bl-lg rounded-br-lg'>
         <div className='col-span-1 md:col-span-2 flex flex-col gap-2 items-center md:items-start '>
           {/* <Link href={'/'} className='flex items-center'>
             <Image
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
+        {/* <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
           <Link href={'/'}>Trang chủ</Link>
           <Link href={'/'}>Liên hệ</Link>
           <Link href={'/'}>Chính sách</Link>
@@ -64,7 +64,7 @@ const Footer = () => {
           <Link href={'/'}>Sản phẩm mới</Link>
           <Link href={'/'}>Sản phẩm bán chạy</Link>
           <Link href={'/'}>Sản phẩm khuyến mãi</Link>
-        </div>
+        </div> */}
 
         <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
           <p className='text-sm'>Theo dõi chúng tôi:</p>
@@ -88,7 +88,7 @@ const Footer = () => {
           Mã số doanh nghiệp: 3603240938 do Sở Kế hoạch & Đầu tư tỉnh Đồng Nai
           cấp lần đầu ngày 30/12/2014
         </p>
-        <p>
+        {/* <p>
           Thiết kế và phát triển bởi:{' '}
           <Link
             href={'https://zalo.me/0982577949'}
@@ -97,7 +97,7 @@ const Footer = () => {
           >
             Nguyễn Thông Hoàng Anh
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );

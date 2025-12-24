@@ -23,13 +23,33 @@ const features = [
     img: '/features/phu-kien.jpg',
     desc: 'Phụ kiện đa dạng, chất lượng cao, giá cả hợp lý',
   },
+  {
+    title: 'Nước khoáng',
+    img: '/features/nuoc.jpg',
+    desc: 'Nước khoáng chính hãng',
+  },
+  {
+    title: 'Máy lọc nước',
+    img: '/features/may-loc-nuoc.jpg',
+    desc: 'Máy lọc nước chính hãng',
+  },
+  {
+    title: 'Nấu công nghiệp',
+    img: '/features/cong-nghiep.jpg',
+    desc: 'Nồi cơm điện, nồi cơm gas, nấu công nghiệp',
+  },
+  {
+    title: 'Gạo',
+    img: '/features/gao.jpg',
+    desc: 'Gạo sạch',
+  },
 ];
 
 const Features = () => {
   return (
-    <section>
+    <div>
       <SectionHeader text='Sản phẩm' />
-      <div className='grid grid-cols-4 gap-2 mt-2'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-2'>
         {features.map((feature, index) => (
           <div key={index} className='shadow-lg rounded-lg overflow-hidden'>
             <div className='relative aspect-square overflow-hidden'>
@@ -47,7 +67,7 @@ const Features = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

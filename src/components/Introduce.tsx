@@ -3,7 +3,7 @@ import React from 'react';
 
 const Introduce = () => {
   return (
-    <div className='flex flex-row gap-5 mb-6 md:mb-12 bg-gray-100 rounded-md'>
+    <div className='flex flex-row gap-5 mb-6 md:mb-12'>
       <div className='hidden md:block md:flex-1 relative aspect-square'>
         <Image
           src={'/company.jpeg'}
@@ -19,7 +19,7 @@ const Introduce = () => {
         <h1 className='uppercase font-bold text-xl text-[#302671] my-4'>
           CÔNG TY TNHH HIỀN PHÁT VI NA
         </h1>
-        <p className='text-[#333] font-medium leading-loose'>
+        <p className='text-[#333] font-medium leading-loose text-justify'>
           CTY TNHH Hiền Phát Vi Na là đơn vị cung cấp gas, bếp gas và thiết bị
           gia dụng uy tín tại khu vực Long Thành. Chúng tôi chuyên phân phối gas
           chính hãng, lắp đặt – bảo trì hệ thống bếp và cung cấp các sản phẩm
@@ -30,7 +30,7 @@ const Introduce = () => {
           thân thiết, mang đến trải nghiệm mua sắm nhanh chóng, tiện lợi và bảo
           đảm chất lượng trong từng sản phẩm.
         </p>
-        <h3 className='text-[#fb77c5] font-bold'>
+        <h3 className='text-[#fb77c5] font-bold text-center mt-2'>
           Phương châm hoạt động: AN TOÀN - TIẾT KIỆM - TIN CẬY
         </h3>
       </div>
