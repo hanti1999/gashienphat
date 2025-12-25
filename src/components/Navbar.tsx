@@ -17,7 +17,7 @@ const Navbar = () => {
             className='size-6 md:size-20'
           />
         </Link>
-        <div className='cursor-default'>
+        <div className='cursor-default select-none'>
           <p className='text-xs md:text-lg leading-tight font-bold text-[#302671]'>
             Gas Hiền Phát
           </p>

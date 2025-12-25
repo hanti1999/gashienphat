@@ -35,7 +35,7 @@ const features = [
   },
   {
     title: 'Nấu công nghiệp',
-    img: '/features/cong-nghiep.jpg',
+    img: '/features/cong-nghiep.JPG',
     desc: 'Nồi cơm điện, nồi cơm gas, nấu công nghiệp',
   },
   {
@@ -49,20 +49,21 @@ const Features = () => {
   return (
     <div>
       <SectionHeader text='Sản phẩm' />
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-2'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-6'>
         {features.map((feature, index) => (
           <div key={index} className='shadow-lg rounded-lg overflow-hidden'>
-            <div className='relative aspect-square overflow-hidden'>
+            <div className='aspect-square overflow-hidden size-70 relative'>
               <Image
                 alt={feature.title}
                 src={feature.img}
-                width={280}
-                height={280}
+                fill
                 className='hover:scale-105 transition-all duration-300'
               />
             </div>
-            <div className='p-2 flex justify-center'>
-              <p className='uppercase text-lg font-medium'>{feature.title}</p>
+            <div className='p-2 flex justify-center bg-white'>
+              <p className='uppercase text-lg font-medium select-none'>
+                {feature.title}
+              </p>
             </div>
           </div>
         ))}

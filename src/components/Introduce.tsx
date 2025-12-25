@@ -12,7 +12,7 @@ const Introduce = () => {
           className='object-contain rounded-md'
         />
       </div>
-      <div className='flex-1 p-2'>
+      <div className='flex-1 p-2 select-none'>
         <h1 className='uppercase font-bold text-[#fb77c5]'>
           Giới thiệu về chúng tôi
         </h1>

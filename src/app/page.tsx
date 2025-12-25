@@ -41,7 +41,10 @@ const Homepage = async ({
         brandsList={brandsList}
         params='homepage'
       /> */}
-      <div className='bg-gray-100'>
+      <div
+        className='bg-cover bg-right bg-no-repeat'
+        style={{ backgroundImage: `url('/bg-image_2.png')` }}
+      >
         <div className='container '>
           <FadeInOnScroll>
             <Features />
@@ -53,10 +56,15 @@ const Homepage = async ({
           <Services />
         </FadeInOnScroll>
       </div>
-      <div className='container'>
-        <FadeInOnScroll>
-          <Brands brands={brandsList} />
-        </FadeInOnScroll>
+      <div
+        className='bg-cover bg-left bg-no-repeat'
+        style={{ backgroundImage: `url('/bg-image_1.png')` }}
+      >
+        <div className='container'>
+          <FadeInOnScroll>
+            <Brands brands={brandsList} />
+          </FadeInOnScroll>
+        </div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const Services = () => {
   return (
     <div>
       <SectionHeader text='Dịch vụ' />
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2 mt-4'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2 mt-6 select-none'>
         {data.map((item, index) => (
           <div className='col-span-1' key={index}>
             <div className='flex items-center gap-2'>
@@ -33,7 +33,9 @@ const Services = () => {
                 </div>
               </div>
               <div className='flex-1'>
-                <h2 className='font-medium text-lg uppercase'>{item.title}</h2>
+                <h2 className='font-medium text-lg uppercase text-[#302671]'>
+                  {item.title}
+                </h2>
                 <p>{item.desc}</p>
               </div>
             </div>
