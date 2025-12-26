@@ -3,7 +3,7 @@ import React from 'react';
 
 const Introduce = () => {
   return (
-    <div className='flex flex-row gap-5 mb-6 md:mb-12'>
+    <div className='md:flex md:flex-row md:gap-2 mb-4 md:mb-6'>
       <div className='hidden md:block md:flex-1 relative aspect-square'>
         <Image
           src={'/company.jpeg'}
@@ -12,7 +12,7 @@ const Introduce = () => {
           className='object-contain rounded-md'
         />
       </div>
-      <div className='flex-1 p-2 select-none'>
+      <div className='md:flex-1 select-none'>
         <h1 className='uppercase font-bold text-[#fb77c5]'>
           Giới thiệu về chúng tôi
         </h1>

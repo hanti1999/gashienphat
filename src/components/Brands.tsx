@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Brands = ({ brands }: { brands: BrandType[] }) => {
   return (
-    <div className='mt-6 md:mt-12 p-2'>
+    <div className='mb-4 md:mb-6'>
       <SectionHeader text='Thương hiệu' />
       <div className='grid grid-cols-2 md:grid-cols-5 gap-2'>
         {brands.map((item) => (

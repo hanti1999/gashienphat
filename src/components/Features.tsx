@@ -47,12 +47,15 @@ const features = [
 
 const Features = () => {
   return (
-    <div>
+    <div className='mb-4 md:mb-6'>
       <SectionHeader text='Sản phẩm' />
       <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-6'>
         {features.map((feature, index) => (
-          <div key={index} className='shadow-lg rounded-lg overflow-hidden'>
-            <div className='aspect-square overflow-hidden size-70 relative'>
+          <div
+            key={index}
+            className='shadow-lg rounded-lg overflow-hidden col-span-1'
+          >
+            <div className='aspect-square overflow-hidden max-w-70 max-h-70 relative'>
               <Image
                 alt={feature.title}
                 src={feature.img}
@@ -61,7 +64,7 @@ const Features = () => {
               />
             </div>
             <div className='p-2 flex justify-center bg-white'>
-              <p className='uppercase text-lg font-medium select-none'>
+              <p className='uppercase md:text-lg font-medium select-none'>
                 {feature.title}
               </p>
             </div>

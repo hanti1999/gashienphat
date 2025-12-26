@@ -7,18 +7,14 @@ const Navbar = () => {
   return (
     <nav className='w-full flex items-end justify-center md:justify-between'>
       {/* Left */}
-      <div className='flex items-end gap-2'>
-        <Link href={'/'}>
-          <Image
-            src={'/logo.png'}
-            alt='Hien Phat logo'
-            width={80}
-            height={80}
-            className='size-6 md:size-20'
-          />
-        </Link>
+      <div className='flex items-center md:items-end gap-2'>
+        <div className='size-8 md:size-20 relative'>
+          <Link href={'/'}>
+            <Image src={'/logo.png'} alt='Hien Phat logo' fill />
+          </Link>
+        </div>
         <div className='cursor-default select-none'>
-          <p className='text-xs md:text-lg leading-tight font-bold text-[#302671]'>
+          <p className='md:text-lg leading-tight font-bold text-[#302671]'>
             Gas Hiền Phát
           </p>
           <p className='hidden md:block text-[#302671]'>

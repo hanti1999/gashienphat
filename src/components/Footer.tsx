@@ -5,8 +5,8 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className=''>
-      <div className='grid grid-cols-1 md:grid-cols-3 bg-gray-700 text-white p-8 rounded-bl-lg rounded-br-lg'>
-        <div className='col-span-1 md:col-span-2 flex flex-col gap-2 items-center md:items-start '>
+      <div className='grid grid-cols-1 md:grid-cols-3 bg-gray-700 text-white p-8 gap-2'>
+        <div className='col-span-1 md:col-span-2 flex flex-col gap-2 items-center md:items-start'>
           {/* <Link href={'/'} className='flex items-center'>
             <Image
               src={'/logo.png'}
@@ -66,7 +66,7 @@ const Footer = () => {
           <Link href={'/'}>Sản phẩm khuyến mãi</Link>
         </div> */}
 
-        <div className='col-span-1 md:col-span-1 flex flex-col gap-4 text-sm  items-center md:items-start'>
+        <div className='col-span-1 md:col-span-1 mt-2 md:mt-0 flex flex-col gap-4 text-sm items-center md:items-start'>
           <p className='text-sm'>Theo dõi chúng tôi:</p>
           <Link
             href={'https://www.facebook.com/hienphatvina'}
@@ -84,7 +84,7 @@ const Footer = () => {
       </div>
       <div className='flex flex-col items-center p-2 text-gray-500'>
         <p>Công ty TNHH Hiền Phát Vi Na</p>
-        <p>
+        <p className='text-center'>
           Mã số doanh nghiệp: 3603240938 do Sở Kế hoạch & Đầu tư tỉnh Đồng Nai
           cấp lần đầu ngày 30/12/2014
         </p>

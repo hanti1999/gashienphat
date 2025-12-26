@@ -27,10 +27,8 @@ const Services = () => {
         {data.map((item, index) => (
           <div className='col-span-1' key={index}>
             <div className='flex items-center gap-2'>
-              <div>
-                <div className='rounded-full bg-gray-100 p-4'>
-                  <Image src={item.img} alt={item.img} width={60} height={60} />
-                </div>
+              <div className='rounded-full bg-gray-100 p-4'>
+                <Image src={item.img} alt={item.img} width={60} height={60} />
               </div>
               <div className='flex-1'>
                 <h2 className='font-medium text-lg uppercase text-[#302671]'>
