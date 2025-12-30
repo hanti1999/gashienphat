@@ -37,4 +37,16 @@ export type BannerType = {
   createdAt?: Date | null;
 };
 
+export type NotificationType = {
+  id: string | number;
+  title: string;
+  slug: string;
+  type: string;
+  thumbnail: string | null;
+  shortDescription: string | null;
+  content?: string;
+  published?: boolean;
+  createdAt: Date | null;
+};
+
 export type ProductsType = ProductType[];

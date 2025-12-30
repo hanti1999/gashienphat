@@ -7,6 +7,7 @@ import { db } from '../../database/drizzle';
 import { asc, eq } from 'drizzle-orm';
 import FadeInOnScroll from '../../lib/FadeInOnScroll';
 import Services from '@/components/Services';
+import Notifications from '@/components/Notifications';
 
 const Homepage = async ({
   searchParams,
@@ -65,6 +66,11 @@ const Homepage = async ({
             <Brands brands={brandsList} />
           </FadeInOnScroll>
         </div>
+      </div>
+      <div className='container'>
+        <FadeInOnScroll>
+          <Notifications />
+        </FadeInOnScroll>
       </div>
     </div>
   );

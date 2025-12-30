@@ -47,7 +47,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className='mb-4 md:mb-6'>
+    <section>
       <SectionHeader text='Sản phẩm' />
       <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-6'>
         {features.map((feature, index) => (
@@ -71,7 +71,7 @@ const Features = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

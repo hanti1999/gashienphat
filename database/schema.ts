@@ -76,3 +76,16 @@ export const banners = pgTable('banners', {
   sortOrder: integer('sort_order').default(0),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });
+
+export const notifications = pgTable('notifications', {
+  id: uuid('id').notNull().primaryKey().defaultRandom().unique(),
+  title: varchar('title', { length: 255 }).notNull(),
+  slug: text('slug').notNull().unique(),
+  // Phân loại: 'PRICE' (Giá), 'PROMO' (Khuyến mãi), 'SYSTEM' (Thông báo chung)
+  type: varchar('type', { length: 50 }).default('GENERAL').notNull(),
+  thumbnail: text('thumbnail'),
+  shortDescription: text('short_description'),
+  content: text('content').notNull(),
+  published: boolean('published').default(true),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});

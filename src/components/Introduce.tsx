@@ -3,7 +3,7 @@ import React from 'react';
 
 const Introduce = () => {
   return (
-    <div className='md:flex md:flex-row md:gap-2 mb-4 md:mb-6'>
+    <section className='md:flex md:flex-row md:gap-2'>
       <div className='hidden md:block md:flex-1 relative aspect-square'>
         <Image
           src={'/company.jpeg'}
@@ -34,7 +34,7 @@ const Introduce = () => {
           Phương châm hoạt động: AN TOÀN - TIẾT KIỆM - TIN CẬY
         </h3>
       </div>
-    </div>
+    </section>
   );
 };
 

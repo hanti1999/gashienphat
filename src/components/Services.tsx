@@ -21,7 +21,7 @@ const data = [
 
 const Services = () => {
   return (
-    <div>
+    <section>
       <SectionHeader text='Dịch vụ' />
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2 mt-6 select-none'>
         {data.map((item, index) => (
@@ -40,7 +40,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Brands = ({ brands }: { brands: BrandType[] }) => {
   return (
-    <div className='mb-4 md:mb-6'>
+    <section>
       <SectionHeader text='Thương hiệu' />
       <div className='grid grid-cols-2 md:grid-cols-5 gap-2'>
         {brands.map((item) => (
@@ -20,7 +20,7 @@ const Brands = ({ brands }: { brands: BrandType[] }) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

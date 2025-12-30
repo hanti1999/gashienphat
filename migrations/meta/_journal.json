@@ -36,6 +36,13 @@
       "when": 1765361140065,
       "tag": "0004_far_bulldozer",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1767064331235,
+      "tag": "0005_naive_morbius",
+      "breakpoints": true
     }
   ]
 }

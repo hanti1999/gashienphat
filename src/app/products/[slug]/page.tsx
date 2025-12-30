@@ -62,7 +62,7 @@ const ProductPage = async ({
           />
           {result[0].product_details?.video !== 'null' && (
             <ModalClient>
-              <div className='aspect-[3/4]'>
+              <div className='aspect-3/4'>
                 <video
                   src={result[0].product_details!.video}
                   controls

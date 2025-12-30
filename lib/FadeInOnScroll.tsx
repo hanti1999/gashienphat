@@ -35,12 +35,12 @@ const FadeInOnScroll = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <section
+    <div
       className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
       ref={domRef}
     >
       {children}
-    </section>
+    </div>
   );
 };
 
