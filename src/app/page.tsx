@@ -7,7 +7,8 @@ import { db } from '../../database/drizzle';
 import { asc, eq } from 'drizzle-orm';
 import FadeInOnScroll from '../../lib/FadeInOnScroll';
 import Services from '@/components/Services';
-import Notifications from '@/components/Notifications';
+import NotiList from '@/components/NotiList';
+import Map from '@/components/Map';
 
 const Homepage = async ({
   searchParams,
@@ -69,9 +70,10 @@ const Homepage = async ({
       </div>
       <div className='container'>
         <FadeInOnScroll>
-          <Notifications />
+          <NotiList limit={3} params='homepage' />
         </FadeInOnScroll>
       </div>
+      <Map />
     </div>
   );
 };

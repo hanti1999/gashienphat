@@ -44,7 +44,6 @@ export default function RootLayout({
         {children}
         {/* <PriceFloatButton /> */}
         <FloatButton />
-        <Map />
         <Footer />
       </body>
     </html>

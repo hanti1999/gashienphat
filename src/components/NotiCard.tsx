@@ -15,7 +15,7 @@ const NotiCard = ({ noti }: { noti: NotificationType }) => {
 
   return (
     <Link
-      href={`/notifications/${noti.slug}`}
+      href={`/thong-bao/${noti.slug}`}
       className='shadow-lg rounded-lg overflow-hidden col-span-1'
     >
       <div className='aspect-2/1 overflow-hidden relative'>

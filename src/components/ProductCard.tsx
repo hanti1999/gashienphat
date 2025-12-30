@@ -7,7 +7,7 @@ import { ProductType } from '@/types';
 const ProductCard = ({ product }: { product: ProductType }) => {
   return (
     <div className='shadow-lg rounded-lg overflow-hidden'>
-      <Link href={`/products/${product?.slug}`}>
+      <Link href={`/san-pham/${product?.slug}`}>
         <div className='relative aspect-square'>
           <Image
             src={product?.coverImage}

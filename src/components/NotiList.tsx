@@ -5,7 +5,13 @@ import { eq, desc } from 'drizzle-orm';
 import NotiCard from './NotiCard';
 import Link from 'next/link';
 
-const Notifications = async () => {
+const NotiList = async ({
+  limit,
+  params,
+}: {
+  limit: number;
+  params: 'homepage' | 'thong-bao';
+}) => {
   const notiList = await db
     .select({
       id: notifications.id,
@@ -19,17 +25,18 @@ const Notifications = async () => {
     .from(notifications)
     .where(eq(notifications.published, true))
     .orderBy(desc(notifications.createdAt))
-    .limit(3);
+    .limit(limit);
+
   return (
     <section>
-      <SectionHeader text='Thông báo' />
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2 mt-6'>
+      {params === 'homepage' && <SectionHeader text='Thông báo' />}
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-6'>
         {notiList.map((noti, index) => (
           <NotiCard key={index} noti={noti} />
         ))}
       </div>
       <div className='mt-6 flex justify-end'>
-        <Link className='text-[#333] underline' href={'/notifications'}>
+        <Link className='text-[#333] underline' href={'/thong-bao'}>
           Xem thêm
         </Link>
       </div>
@@ -37,4 +44,4 @@ const Notifications = async () => {
   );
 };
 
-export default Notifications;
+export default NotiList;

@@ -95,7 +95,7 @@ const ProductList = async ({
         data.length > 0 && (
           <div className='mt-4 flex justify-center'>
             <Link
-              href='/products'
+              href='/san-pham'
               className='uppercase px-4 py-2 bg-[#fb77c5] hover:bg-pink-300 shadow-lg cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out rounded-2xl text-sm text-white'
             >
               Xem thêm
