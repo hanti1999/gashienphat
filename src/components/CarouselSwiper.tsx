@@ -28,23 +28,25 @@ const CarouselSwiper = ({
         className='mySwiper2'
       >
         <SwiperSlide>
-          <div className='relative aspect-[4/3]'>
+          <div className='relative aspect-4/3'>
             <Image
               src={coverImage}
               alt={'cover image'}
               fill
               className='object-contain rounded-md'
+              sizes='(max-width: 768px) 100vw, 50vw'
             />
           </div>
         </SwiperSlide>
         {carousel.map((img, index) => (
           <SwiperSlide key={index}>
-            <div className='relative aspect-[4/3]'>
+            <div className='relative aspect-4/3'>
               <Image
                 src={img}
                 alt={index.toString()}
                 fill
                 className='object-contain rounded-md'
+                sizes='(max-width: 768px) 100vw, 50vw'
               />
             </div>
           </SwiperSlide>
@@ -60,23 +62,25 @@ const CarouselSwiper = ({
         className='mySwiper'
       >
         <SwiperSlide>
-          <div className='relative aspect-[4/3]'>
+          <div className='relative aspect-4/3'>
             <Image
               src={coverImage}
               alt={'cover image'}
               fill
               className='object-contain rounded-md'
+              sizes='(max-width: 768px) 100vw, 50vw'
             />
           </div>
         </SwiperSlide>
         {carousel.map((img, index) => (
           <SwiperSlide key={index}>
-            <div className='relative aspect-[4/3]'>
+            <div className='relative aspect-4/3'>
               <Image
                 src={img}
                 alt={index.toString()}
                 fill
                 className='object-contain rounded-md'
+                sizes='(max-width: 768px) 100vw, 50vw'
               />
             </div>
           </SwiperSlide>

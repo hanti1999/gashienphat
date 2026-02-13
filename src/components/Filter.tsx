@@ -55,7 +55,7 @@ const Filter = ({ brands }: { brands?: BrandType[] }) => {
         <span>Sắp xếp: </span>
         {sortOptions.map((option) => (
           <span
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:text-[#fb77c5] ${
               option.value === selectdSort ? 'text-[#fb77c5]' : ''
             }`}
             key={option.label}

@@ -14,6 +14,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
             alt={product?.name}
             fill
             className='object-cover hover:scale-105 transition-all duration-300'
+            sizes='(max-width: 768px) 100vw, 50vw'
           />
         </div>
       </Link>
