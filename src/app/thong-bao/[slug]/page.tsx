@@ -1,6 +1,5 @@
 import { notifications } from '../../../../database/schema';
 import { db } from '../../../../database/drizzle';
-import ratelimit from '../../../../lib/ratelimit';
 import { redirect } from 'next/navigation';
 import { headers } from 'next/headers';
 import { eq } from 'drizzle-orm';
@@ -29,12 +28,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     .where(eq(notifications.slug, (await params).slug));
 
   const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
-  const { success } = await ratelimit.limit(ip);
-
-  if (!success) return redirect('/too-fast');
 
   return (
-    <div>
+    <div className='container'>
       <Goback />
       <div>
         <p>Đang trong giai đoạn phát triển ..</p>
