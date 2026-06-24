@@ -20,14 +20,24 @@ const Filter = ({ brands }: { brands?: BrandType[] }) => {
 
   const handleSort = (value: string) => {
     const params = new URLSearchParams(searchParams);
-    params.set('sort', value);
-    router.push(`${pathname}/?${params.toString()}`, { scroll: false });
+    if (selectdSort === value) {
+      params.delete('sort'); // Bấm lần 2 vào 'Mới' thì sẽ tắt bộ lọc 'Mới'
+    } else {
+      params.set('sort', value);
+    }
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   const handleBrand = (value: string) => {
     const params = new URLSearchParams(searchParams);
-    params.set('brand', value);
-    router.push(`${pathname}/?${params.toString()}`, { scroll: false });
+    if (selectedBrand === value) {
+      params.delete('brand');
+    } else {
+      params.set('brand', value);
+    }
+    // Khi đổi hãng, reset page về 1
+    params.delete('page');
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   return (
@@ -37,7 +47,7 @@ const Filter = ({ brands }: { brands?: BrandType[] }) => {
           href={pathname}
           className={`${!searchParams.toString() ? 'hidden' : ''}`}
         >
-          <span className='text-red-500'>Xóa bộ lọc</span>
+          <span className='text-red-500 text-sm'>Xóa bộ lọc</span>
         </Link>
         {brands?.map((brand) => (
           <div

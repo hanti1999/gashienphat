@@ -6,6 +6,7 @@ import { banners, brands } from '../../database/schema';
 import { db } from '../../database/drizzle';
 import { asc, eq } from 'drizzle-orm';
 import FadeInOnScroll from '../../lib/FadeInOnScroll';
+import ProductList from '@/components/ProductList';
 import Services from '@/components/Services';
 import NotiList from '@/components/NotiList';
 import Map from '@/components/Map';
@@ -40,8 +41,8 @@ const Homepage = async ({
       </div>
       {/* <ProductList
         category={category}
-        brandsList={brandsList}
         params='homepage'
+        brandsList={brandsList}
       /> */}
       <div
         className='bg-cover bg-right bg-no-repeat'
