@@ -8,6 +8,7 @@ import {
   uniqueIndex,
   boolean,
   integer,
+  jsonb,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 
@@ -46,9 +47,9 @@ export const productDetails = pgTable(
   },
   (table) => ({
     productIdUnique: uniqueIndex('product_details_product_id_unique').on(
-      table.productId
+      table.productId,
     ),
-  })
+  }),
 );
 
 export const brands = pgTable('brands', {
@@ -85,7 +86,7 @@ export const notifications = pgTable('notifications', {
   type: varchar('type', { length: 50 }).default('GENERAL').notNull(),
   thumbnail: text('thumbnail'),
   shortDescription: text('short_description'),
-  content: text('content').notNull(),
+  content: jsonb('content').notNull(),
   published: boolean('published').default(true),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });

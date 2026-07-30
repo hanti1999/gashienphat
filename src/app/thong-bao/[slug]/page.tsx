@@ -1,7 +1,7 @@
 import { notifications } from '../../../../database/schema';
 import { db } from '../../../../database/drizzle';
-import { redirect } from 'next/navigation';
-import { headers } from 'next/headers';
+// import { redirect } from 'next/navigation';
+// import { headers } from 'next/headers';
 import { eq } from 'drizzle-orm';
 import Goback from '@/components/Goback';
 
@@ -27,14 +27,15 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     .from(notifications)
     .where(eq(notifications.slug, (await params).slug));
 
-  const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
+  // const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
 
   return (
     <div className='container'>
       <Goback />
-      <div>
-        <p>Đang trong giai đoạn phát triển ..</p>
-      </div>
+      <div
+        className='prose prose-blue max-w-none mt-10'
+        dangerouslySetInnerHTML={{ __html: result[0].content }}
+      />
     </div>
   );
 };
