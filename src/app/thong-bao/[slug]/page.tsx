@@ -34,7 +34,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Goback />
       <div
         className='prose prose-blue max-w-none mt-10'
-        dangerouslySetInnerHTML={{ __html: result[0].content }}
+        dangerouslySetInnerHTML={{ __html: result[0].content as string }}
       />
     </div>
   );
