@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
         <div>
           <p className='font-medium'>199, Quốc lộ 51</p>
-          <p className='text-xs'>X.An Phước, T.Đồng Nai</p>
+          <p className='text-xs'>X.An Phước, TP.Đồng Nai</p>
         </div>
         <div className='p-3 bg-[#fb77c5] rounded-full'>
           <Phone color='#fff' size={18} />

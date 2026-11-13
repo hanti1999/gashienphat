@@ -18,7 +18,7 @@ const Footer = () => {
           </Link> */}
           <h1 className='font-bold'>CÔNG TY TNHH HIỀN PHÁT VI NA</h1>
           <div>
-            Địa chỉ: 199, Quốc Lộ 51, ấp 7, xã An Phước, tỉnh Đồng Nai{' '}
+            Địa chỉ: 199, Quốc Lộ 51, ấp Thanh Nguyên, xã An Phước, TP Đồng Nai{' '}
             <Link
               className='cursor-pointer underline text-blue-500'
               href='https://goo.gl/maps/yYy447eNamPJ1FYE9'
@@ -42,7 +42,7 @@ const Footer = () => {
           <div>
             Zalo:{' '}
             <Link href='https://zalo.me/0982577949' target='_blank'>
-              <b>0982 577 948 (Hoàng Anh)</b>
+              <b>0982 577 949 (Hoàng Anh)</b>
             </Link>
           </div>
           <div>

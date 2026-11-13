@@ -18,7 +18,7 @@ const Homepage = async ({
 }) => {
   const category = (await searchParams).category;
 
-  const bannerQuery = await db
+  const bannerQuery = db
     .select()
     .from(banners)
     .where(eq(banners.active, true))

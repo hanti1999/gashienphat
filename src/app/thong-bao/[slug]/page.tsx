@@ -1,40 +1,54 @@
+import { cache } from 'react';
+import { notFound } from 'next/navigation';
+import { and, eq } from 'drizzle-orm';
 import { notifications } from '../../../../database/schema';
 import { db } from '../../../../database/drizzle';
-// import { redirect } from 'next/navigation';
-// import { headers } from 'next/headers';
-import { eq } from 'drizzle-orm';
 import Goback from '@/components/Goback';
+
+const getNotificationBySlug = cache(async (slug: string) => {
+  const result = await db
+    .select()
+    .from(notifications)
+    .where(and(eq(notifications.slug, slug), eq(notifications.published, true)))
+    .limit(1);
+
+  return result[0] ?? null;
+});
 
 export const generateMetadata = async ({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) => {
-  const result = await db
-    .select()
-    .from(notifications)
-    .where(eq(notifications.slug, (await params).slug));
+  const { slug } = await params;
+  const noti = await getNotificationBySlug(slug);
+
+  if (!noti) {
+    return {
+      title: 'Không tìm thấy thông báo',
+    };
+  }
 
   return {
-    title: result[0].title,
-    describe: result[0].shortDescription,
+    title: noti.title,
+    description: noti.shortDescription ?? '',
   };
 };
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const result = await db
-    .select()
-    .from(notifications)
-    .where(eq(notifications.slug, (await params).slug));
+  const { slug } = await params;
+  const noti = await getNotificationBySlug(slug);
 
-  // const ip = (await headers()).get('x-forwarded-for') || '127.0.0.1';
+  if (!noti) {
+    notFound();
+  }
 
   return (
     <div className='container'>
       <Goback />
       <div
         className='prose prose-blue max-w-none mt-10'
-        dangerouslySetInnerHTML={{ __html: result[0].content as string }}
+        dangerouslySetInnerHTML={{ __html: noti.content as string }}
       />
     </div>
   );

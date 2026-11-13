@@ -12,7 +12,7 @@ const SearchBar = () => {
   const handleSearch = (value: string) => {
     const params = new URLSearchParams(searchParams);
     params.set('search', value);
-    router.push(`/products?${params.toString()}`, { scroll: false });
+    router.push(`/san-pham?${params.toString()}`, { scroll: false });
   };
 
   return (

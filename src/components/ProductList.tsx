@@ -27,7 +27,7 @@ const ProductList = async ({
   page?: string;
   brandsList?: BrandType[];
 }) => {
-  const currentPage = Number(page) || 1;
+  const currentPage = Math.max(1, Math.floor(Number(page) || 1));
   const offset = (currentPage - 1) * PAGE_SIZE;
 
   let orderBySQL = desc(products.createdAt);
