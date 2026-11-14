@@ -30,15 +30,16 @@ export const generateMetadata = async ({
 }: {
   params: Promise<{ slug: string }>;
 }) => {
-  const result = await db
-    .select()
-    .from(products)
-    .leftJoin(productDetails, eq(products.id, productDetails.productId))
-    .where(eq(products.slug, (await params).slug));
-
+  const { slug } = await params;
+  const data = await getProductBySlug(slug);
+  if (!data) {
+    return {
+      title: 'Không tìm thấy sản phẩm',
+    };
+  }
   return {
-    title: result[0].products.name,
-    description: result[0].product_details!.shortDescription,
+    title: data.products.name,
+    description: data.product_details?.shortDescription ?? '',
   };
 };
 

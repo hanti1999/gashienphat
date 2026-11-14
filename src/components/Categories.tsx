@@ -35,6 +35,7 @@ const Categories = () => {
   const handleChange = (value: string | null) => {
     const params = new URLSearchParams(searchParams);
     params.set('category', value || '');
+    params.delete('page');
     router.push(`${pathname}/?${params.toString()}`, { scroll: false });
   };
 
