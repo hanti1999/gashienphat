@@ -25,23 +25,24 @@ const getProductBySlug = cache(async (slug: string) => {
   return result[0] ?? null;
 });
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) => {
-  const { slug } = await params;
-  const data = await getProductBySlug(slug);
-  if (!data) {
-    return {
-      title: 'Không tìm thấy sản phẩm',
-    };
-  }
-  return {
-    title: data.products.name,
-    description: data.product_details?.shortDescription ?? '',
-  };
-};
+// Tạm thời tắt metadata vì chưa thể hiển thị, cần sửa lại khi có dữ liệu
+// export const generateMetadata = async ({
+//   params,
+// }: {
+//   params: Promise<{ slug: string }>;
+// }) => {
+//   const { slug } = await params;
+//   const data = await getProductBySlug(slug);
+//   if (!data) {
+//     return {
+//       title: 'Không tìm thấy sản phẩm',
+//     };
+//   }
+//   return {
+//     title: data.products.name,
+//     description: data.product_details?.shortDescription ?? '',
+//   };
+// };
 
 const ProductPage = async ({
   params,
