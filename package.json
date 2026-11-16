@@ -9,7 +9,8 @@
     "lint": "next lint",
     "db:generate": "npx drizzle-kit generate",
     "db:migrate": "npx drizzle-kit migrate",
-    "db:studio": "npx drizzle-kit studio"
+    "db:studio": "npx drizzle-kit studio",
+    "gen:link": "node --env-file=.env.local -e \"const c=require('crypto'),h=Number(process.argv[1])||24,e=Math.floor(Date.now()/1000)+h*3600,s=c.createHmac('sha256',process.env.CATALOG_SECRET_KEY).update(String(e)).digest('hex').slice(0,16);console.log('Link ('+h+'h): /san-pham?key='+e+'.'+s)\""
   },
   "dependencies": {
     "@imagekit/next": "^2.1.3",

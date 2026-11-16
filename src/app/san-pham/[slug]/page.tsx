@@ -58,7 +58,7 @@ const ProductPage = async ({
   return (
     <div>
       <Goback />
-      <div className='flex flex-col gap-4 lg:flex-row md:gap-12'>
+      <div className='flex flex-col gap-4 lg:flex-row md:gap-12 mb-8'>
         <div className='w-full lg:w-5/12'>
           <CarouselSwiper
             carousel={data.product_details?.carousel ?? []}

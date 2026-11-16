@@ -17,7 +17,7 @@ export const Pagination = ({ totalPages }: { totalPages: number }) => {
   if (totalPages <= 1) return null;
 
   return (
-    <div className='flex justify-center gap-2 mt-8'>
+    <div className='flex justify-center gap-2 my-8'>
       <Link
         href={createPageURL(currentPage - 1)}
         className={`px-4 py-2 border rounded ${
